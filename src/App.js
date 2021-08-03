@@ -26,11 +26,11 @@ function App() {
 
         <Switch>
           <Route exact path={homeURL} component={HomePage} />
-          <Route exact path={aboutURL} component={AboutPage} />
-          <Route exact path={contactUsURL} component={ContactPage} />
-          <Route exact path={dashboardURL} component={DashboardPage} />
-          <Route exact path={loginRegisterURL} component={LoginRegisterPage}/>          
-          <Route exact path={patronPortalURL} component={PatronPortalPage} />
+          <Route path={aboutURL} component={AboutPage} />
+          <Route path={contactUsURL} component={ContactPage} />
+          <Route path={dashboardURL} component={DashboardPage} />
+          <Route path={loginRegisterURL} component={LoginRegisterPage}/>          
+          <Route path={patronPortalURL} component={PatronPortalPage} />
         </Switch>
 
       </BrowserRouter>
