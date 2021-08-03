@@ -8,6 +8,7 @@ import {
   loginRegisterURL,
   patronPortalURL   
 } from './utilities/routerConfig';
+import Header from './components/header/Header';
 import HomePage from './pages/home/Home';
 import AboutPage from './pages/about/About';
 import ContactPage from './pages/contact/Contact';
@@ -20,6 +21,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Header />
         <h1>AEGIS</h1>
 
         <Switch>
