@@ -8,13 +8,13 @@ import {
   loginRegisterURL,
   patronPortalURL   
 } from './utilities/routerConfig';
-import Header from './components/header/Header';
-import HomePage from './pages/home/Home';
-import AboutPage from './pages/about/About';
-import ContactPage from './pages/contact/Contact';
-import DashboardPage from './pages/dashboard/Dashboard';
-import LoginRegisterPage from './pages/login-register/LoginRegister';
-import PatronPortalPage from './pages/patron-portal/PatronPortal';
+import Header from './components/Header/Header';
+import HomePage from './pages/Home/Home';
+import AboutPage from './pages/About/About';
+import ContactPage from './pages/Contact/Contact';
+import DashboardPage from './pages/Dashboard/Dashboard';
+import LoginRegisterPage from './pages/LoginRegister/LoginRegister';
+import PatronPortalPage from './pages/PatronPortal/PatronPortal';
 
 function App() {
 
