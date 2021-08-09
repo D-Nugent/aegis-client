@@ -4,7 +4,7 @@
 .header-login-mob {
     position: relative;
     height: inherit;
-    padding-right: 1rem;
+    margin-right: 1rem;
     display: flex;
     align-items: center;
 
@@ -20,7 +20,7 @@
     &__form {
         position: absolute;
         top: 100%;
-        left: 0;
+        right: 0;
         height: 200px;
         background-color: white;
     }

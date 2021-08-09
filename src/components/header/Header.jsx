@@ -1,15 +1,24 @@
 import './Header.scss';
+import React, { useState } from 'react';
 import Logo from '../HeaderLogo/HeaderLogo';
 import HeaderLoginMobile from '../HeaderLoginMobile/HeaderLoginMobile';
 
 function Header() {
+
+    // temp
+    const [ user, setUser ] = useState(false);
+    // 
+
     return (
         <>
             <div className="header__spacer"></div>
             <header className="header">
                 <Logo />
                 {/* Nav Bar */}
-                <HeaderLoginMobile />
+                { user ? 
+                    <p>Logged In</p> : 
+                    <HeaderLoginMobile setUser={setUser} />
+                }
                 {/* Hamburger Menu */}
             </header>
         </>

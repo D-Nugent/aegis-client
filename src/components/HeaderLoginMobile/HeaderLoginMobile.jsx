@@ -1,7 +1,7 @@
 import './HeaderLoginMobile.scss';
 import React, { useState } from 'react';
 
-function HeaderLoginMobile() {
+function HeaderLoginMobile({ setUser }) {
 
     const [ formVisible, setFormVisible ] = useState(false);
 
@@ -9,6 +9,9 @@ function HeaderLoginMobile() {
         e.preventDefault();
         console.log(e.target.email.value);
         console.log(e.target.password.value);
+        setUser({
+            name: 'Test User'
+        })
     };
 
     const handleChange = e => {
