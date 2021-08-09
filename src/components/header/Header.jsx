@@ -2,6 +2,7 @@ import './Header.scss';
 import React, { useState } from 'react';
 import Logo from '../HeaderLogo/HeaderLogo';
 import HeaderLoginMobile from '../HeaderLoginMobile/HeaderLoginMobile';
+import Hamburger from '../Hamburger/Hamburger';
 
 function Header() {
 
@@ -19,7 +20,7 @@ function Header() {
                     <p>Logged In</p> : 
                     <HeaderLoginMobile setUser={setUser} />
                 }
-                {/* Hamburger Menu */}
+                <Hamburger />
             </header>
         </>
     );
