@@ -15,16 +15,22 @@
         background-color: $color-emphasis-primary;
         border: none;
         outline: none;
-        transform: translate(-4px, -4px);   
+        transform: translate(0, 0);
         transition: transform .3s ease-in;
         box-shadow: 4px 4px 8px rgba(0, 0, 0, .25);
+        
+        @include desktop {
+            width: 128px;
+            height: 34px;
+        }
         
         &:hover {
             box-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
         }
-
+        
         &:active {
-            transform: translate(0, 0);
+            box-shadow: none;
+            transform: translate(4px, 4px);   
         }
     }
 
