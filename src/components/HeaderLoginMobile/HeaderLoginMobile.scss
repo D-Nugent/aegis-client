@@ -1,0 +1,16 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+.header-login-mob {
+    height: inherit;
+    display: flex;
+    align-items: center;
+
+    &__btn {
+        width: 64px;
+        height: 22px;
+        color: $color-offset-secondary;
+        background-color: $color-emphasis-primary;
+        border: none;
+    }
+}

@@ -1,5 +1,6 @@
 import './Header.scss';
 import Logo from '../HeaderLogo/HeaderLogo';
+import HeaderLoginMobile from '../HeaderLoginMobile/HeaderLoginMobile';
 
 function Header() {
     return (
@@ -8,7 +9,7 @@ function Header() {
             <header className="header">
                 <Logo />
                 {/* Nav Bar */}
-                {/* Login Section */}
+                <HeaderLoginMobile />
                 {/* Hamburger Menu */}
             </header>
         </>
