@@ -4,6 +4,7 @@
 .header-login-mob {
     position: relative;
     height: inherit;
+    padding-right: 1rem;
     display: flex;
     align-items: center;
 
@@ -13,6 +14,7 @@
         color: $color-offset-secondary;
         background-color: $color-emphasis-primary;
         border: none;
+        outline: none;          
     }
 
     &__form {
@@ -21,5 +23,16 @@
         left: 0;
         height: 200px;
         background-color: white;
+    }
+
+    &__label {
+        display: block;
+        padding-bottom: 0.75rem;
+    }
+
+    &__input {
+        width: 100%;
+        min-width: 224px;
+        height: 21px;
     }
 }

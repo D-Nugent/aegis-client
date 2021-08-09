@@ -24,11 +24,11 @@ function HeaderLoginMobile() {
             <button onClick={() => setFormVisible(!formVisible)} className="header-login-mob__btn" type="button">Login</button>
             {formVisible &&
             <form className="header-login-mob__form" onSubmit={handleSubmit}>
-                <label htmlFor="email">
-                    <input type="text" placeholder="email..." name="email"onChange={handleChange}/>
+                <label className="header-login-mob__label" htmlFor="email">
+                    <input className="header-login-mob__input" type="text" placeholder="email..." name="email"onChange={handleChange}/>
                 </label>
-                <label htmlFor="password">
-                    <input type="text" placeholder="password..." name="password" onChange={handleChange}/>
+                <label className="header-login-mob__label" htmlFor="password">
+                    <input className="header-login-mob__input" type="text" placeholder="password..." name="password" onChange={handleChange}/>
                 </label>
                 <div>
                     <button type="submit">Submit</button>
