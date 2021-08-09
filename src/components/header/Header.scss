@@ -3,18 +3,19 @@
 
 
 .header {
-
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    height: $header-height-mobile;
     z-index: 1;
-
     display: flex;
     align-items: center;
+    background-color: $color-offset-secondary;
 
-    background-color: white;
-    
+    @include tablet {
+        height: $header-height-tablet-desktop;
+    }
 
     &__spacer {
         width: 100%;
