@@ -6,7 +6,10 @@
 
     &__spacer {
         width: 100%;
-        height: $header-height-mobile;
+        
+        @include mobile {
+            height: $header-height-mobile;
+        }
 
         @include tablet {
             height: $header-height-tablet-desktop;
