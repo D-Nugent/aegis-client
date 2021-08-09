@@ -5,8 +5,8 @@ import { aboutURL, contactUsURL, dashboardURL, homeURL, loginRegisterURL, patron
 function Header() {
     return (
         <>
+            <div className="header__spacer"></div>
             <header></header>
-            <section className="header__filler"></section>
         </>
     );
 }

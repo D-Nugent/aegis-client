@@ -1,11 +1,15 @@
+@use "../../styles/mixins" as *;
 @use "../../styles/variables" as *;
+
 
 .header {
 
-    &__filler {
+    &__spacer {
         width: 100%;
         height: $header-height-mobile;
 
-        background-color: red;
+        @include tablet {
+            height: $header-height-tablet-desktop;
+        }
     }
 }
