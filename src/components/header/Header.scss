@@ -1,9 +1,11 @@
+@use "../../styles/variables" as *;
+
 .header {
 
     &__filler {
         width: 100%;
-        height: 46px;
-        
+        height: $header-height-mobile;
+
         background-color: red;
     }
 }
