@@ -14,7 +14,18 @@
         color: $color-offset-secondary;
         background-color: $color-emphasis-primary;
         border: none;
-        outline: none;          
+        outline: none;
+        transform: translate(-4px, -4px);   
+        transition: transform .3s ease-in;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, .25);
+        
+        &:hover {
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
+        }
+
+        &:active {
+            transform: translate(0, 0);
+        }
     }
 
     &__form {

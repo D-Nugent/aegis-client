@@ -29,4 +29,13 @@
             height: $header-height-tablet-desktop;
         }
     }
+
+    &__column {
+        width: 50%;
+        display: flex;
+
+        &--right {
+            justify-content: flex-end;
+        }
+    }
 }

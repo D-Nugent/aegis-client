@@ -16,11 +16,13 @@ function Header() {
             <header className="header">
                 <Logo />
                 {/* Nav Bar */}
-                { user ? 
-                    <p>Logged In</p> : 
-                    <HeaderLoginMobile setUser={setUser} />
-                }
-                <Hamburger />
+                <div className="header__column header__column--right">
+                    { user ? 
+                        <p>Logged In</p> : 
+                        <HeaderLoginMobile setUser={setUser} />
+                    }
+                    <Hamburger />
+                </div>
             </header>
         </>
     );
