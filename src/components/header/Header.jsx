@@ -1,12 +1,16 @@
 import './Header.scss';
-import { NavLink } from 'react-router-dom';
-import { aboutURL, contactUsURL, dashboardURL, homeURL, loginRegisterURL, patronPortalURL } from '../../utilities/routerConfig';
+import Logo from '../HeaderLogo/HeaderLogo';
 
 function Header() {
     return (
         <>
             <div className="header__spacer"></div>
-            <header></header>
+            <header className="header">
+                <Logo />
+                {/* Nav Bar */}
+                {/* Login Section */}
+                {/* Hamburger Menu */}
+            </header>
         </>
     );
 }
