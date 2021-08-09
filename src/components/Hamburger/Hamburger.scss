@@ -2,6 +2,9 @@
 @use "../../styles/variables" as *;
 
 .hamburger {
+    display: flex;
+    align-items: flex-end;
+
     @include tablet {
         display: none;
     }
