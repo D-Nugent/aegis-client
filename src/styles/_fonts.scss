@@ -1,0 +1,77 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+// Mixins
+@mixin heading-primary {
+    font-size: 1.313rem;    
+
+    @include tablet {
+        font-size: 1.531rem;
+    }
+
+    @include desktop {
+        font-size: 1.75rem;
+    }
+}
+
+@mixin heading-secondary {
+    font-size: 1.125rem;    
+
+    @include tablet {
+        font-size: 1.313rem;
+    }
+
+    @include desktop {
+        font-size: 1.5rem;
+    }
+}
+
+@mixin heading-tertiary {
+    font-size: 1.031rem;    
+
+    @include tablet {
+        font-size: 1.203rem;
+    }
+
+    @include desktop {
+        font-size: 1.375rem;
+    }
+}
+
+@mixin heading-quaternary {
+    font-size: .75rem;    
+
+    @include tablet {
+        font-size: .875rem;
+    }
+
+    @include desktop {
+        font-size: 1rem;
+    }
+}
+
+@mixin text-regular {
+    font-size: .563rem;
+
+    @include tablet {
+        font-size: .656rem;
+    }
+
+    @include desktop {
+        font-size: .75rem;
+    }
+}
+
+@mixin text-small {
+    font-size: .547rem;
+
+    @include tablet {
+        font-size: .547rem;
+    }
+
+    @include desktop {
+        font-size: .625rem;
+    }
+}
+
+// Imports
