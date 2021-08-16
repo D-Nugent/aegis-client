@@ -1,5 +1,18 @@
-*, *::before, *:after {
+@use "./styles/fonts" as *;
+@use "./styles/variables" as *;
+
+
+*, *::before, *::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+html, body, textarea, button {
+  color: $text-primary;
+  font-family: 'Roboto', 'Raleway', 'Ubuntu', sans-serif;
+}
+
+html {
+  @include text-regular;
 }

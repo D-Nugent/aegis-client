@@ -1,20 +1,47 @@
-// Colour Scheme
-$color-primary: #143058;
-$color-secondary: #0f2544;
-$color-tertiary: #435979;
-$color-quater-mary: #d0d6de;
-$color-offset-primary: #eeebe8;
-$color-offset-secondary: #f9f8f7;
-$color-field: #fcfcfb;
-$color-emphasis-primary: #fe5c32;
-$color-emphasis-secondary: #fba919;
-$color-emphasis-tertiary: #fccd7a;
+// Colour - Text
+$text-primary: #0f2544;
+$text-offset: #eeebe8;
+$text-emphasis: #fe5c32;
 
-// Responsive Design
-$screen-mobile: 320px;
+// Resp Design
+$screen-mobile: 280px;
 $screen-tablet: 768px;
+// tablet vertical and horizontal?
 $screen-desktop: 1280px;
 
-// Main Header
-$header-height-mobile: 46px;
-$header-height-tablet-desktop: 54px;
+// Margins
+$margin-mobile-xs: .5rem;
+$margin-mobile-s: .75rem;
+$margin-mobile-m: 1rem;
+$margin-mobile-l: 1.5rem;
+
+$margin-tablet-xs: .5rem;
+$margin-tablet-s: 1rem;
+$margin-tablet-m: 1.5rem;
+$margin-tablet-l: 2rem;
+
+$margin-desktop-xs: .5rem;
+$margin-desktop-s: 1rem;
+$margin-desktop-m: 1.5rem;
+$margin-desktop-l: 3rem;
+
+// Padding
+$padding-mobile-xs: .125rem;
+$padding-mobile-s: .25rem;
+$padding-mobile-m: .5rem;
+$padding-mobile-l: 1rem;
+
+$padding-tablet-xs: .25rem;
+$padding-tablet-s: .5rem;
+$padding-tablet-m: 1rem;
+$padding-tablet-l: 1.5rem;
+
+$padding-desktop-xs: .25rem;
+$padding-desktop-s: .5rem;
+$padding-desktop-m: 1rem;
+$padding-desktop-l: 1.5rem;
+
+// Borders
+$border-width-default: 0.125rem;
+$border-radius-default: 0;
+$border-radius-secondary: 100%;

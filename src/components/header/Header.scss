@@ -1,41 +1,43 @@
 @use "../../styles/mixins" as *;
 @use "../../styles/variables" as *;
 
+$header-height-mob: 46px;
+$header-height-tab-desk: 54px;
+
 
 .header {
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100%;
-    height: $header-height-mobile;
-    z-index: 1;
+    height: $header-height-mob;
+    // padding: 
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
     background-color: $color-offset-secondary;
-
+    
     @include tablet {
-        height: $header-height-tablet-desktop;
+        height: $header-height-tab-desk;
     }
 
     &__spacer {
         width: 100%;
-        
-        @include mobile {
-            height: $header-height-mobile;
-        }
+        height: $header-height-mob;
 
         @include tablet {
-            height: $header-height-tablet-desktop;
+            height: $header-height-tab-desk;
         }
     }
 
     &__column {
-        width: 50%;
-        display: flex;
+        width: 100%;
+        height: inherit;
 
-        &--right {
-            justify-content: flex-end;
-        }
+        border: 1px solid black;
     }
+
 }
