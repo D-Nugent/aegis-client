@@ -7,6 +7,10 @@ import HamburgerIcon from '../../assets/icons/hamburger-menu.svg';
 
 function Header() {
     
+    // TEMP STATE - to be deleted
+    const [ user, setUser ] = useState(false);
+    // 
+
     const [ showMenu, setShowMenu ] = useState(true);
 
     const handleLoginMob = () => console.log("Logged In");
@@ -16,6 +20,10 @@ function Header() {
         const username = e.target.username.value;
         const password = e.target.password.value;
         console.log({ username, password });
+
+        // Temp
+        setUser(true);
+        // 
     };
 
     const handleShowModel = () => setShowMenu(!showMenu);
@@ -44,18 +52,22 @@ function Header() {
                     </nav>
                 </div>
                 <div className="header__column">
-                    <form className="header__login-form" onSubmit={handleLogin}>
-                        <label htmlFor="username">
-                            <input className="header__input" type="text" name="username" placeholder="username..." />
-                        </label>
-                        <label htmlFor="password">
-                            <input className="header__input" type="text" name="password" placeholder="username..." />
-                        </label>
-                        <button className="button-primary header__button" type="submit" >Login</button>
-                    </form>
+                    {!user && 
+                        <form className="header__login-form" onSubmit={handleLogin}>
+                            <label htmlFor="username">
+                                <input className="header__input" type="text" name="username" placeholder="username..." />
+                            </label>
+                            <label htmlFor="password">
+                                <input className="header__input" type="text" name="password" placeholder="password..." />
+                            </label>
+                            <button className="button-primary header__button" type="submit" >Login</button>
+                        </form>
+                    }
                     <button className="button-primary header__button header__button--mob" type="button" onClick={handleLoginMob}>Login</button>
                     <div className="header__hamburger-container" onClick={handleShowModel}>
-                        <img src={HamburgerIcon} alt="hamburger menu" />
+                        {!user &&
+                            <img src={HamburgerIcon} alt="hamburger menu" />
+                        }
                     </div>
                 </div>            
             </header>
