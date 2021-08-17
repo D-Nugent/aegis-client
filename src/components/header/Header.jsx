@@ -1,8 +1,7 @@
 import './Header.scss';
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { aboutURL, loginRegisterURL, faqURL } from '../../utilities/routerConfig';
 import AegisLogo from '../../assets/logo/aegis-logo.svg';
+import HeaderNav from '../HeaderNav/HeaderNav';
 import HamburgerIcon from '../../assets/icons/hamburger-menu.svg';
 
 function Header() {
@@ -34,7 +33,8 @@ function Header() {
             <header className="header">
                 <div className="header__column">
                     <img className="header__logo" src={AegisLogo} alt="logo" />
-                    <nav className="header__nav">
+                    <HeaderNav />
+                    {/* <nav className="header__nav">
                         <ul className="header__items">
                             <li className="header__item">
                                 <NavLink className="header__link" to={aboutURL}>About
@@ -49,7 +49,7 @@ function Header() {
                                 </NavLink>
                             </li>
                         </ul>
-                    </nav>
+                    </nav> */}
                 </div>
                 <div className="header__column">
                     {!user && 

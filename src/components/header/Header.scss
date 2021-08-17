@@ -52,33 +52,33 @@ $header-height-tab-desk: 54px;
         margin-right: 42px;
     }
 
-    &__nav {
-        display: none;
+    // &__nav {
+    //     display: none;
 
-        @include tablet {
-            height: inherit;
-            display: grid;
-            place-items: center;
-        }
+    //     @include tablet {
+    //         height: inherit;
+    //         display: grid;
+    //         place-items: center;
+    //     }
 
-    }
+    // }
 
-    &__items {
-        height: inherit;
-        list-style-type: none;
-        display: flex;
-        align-items: center;
-    }
+    // &__items {
+    //     height: inherit;
+    //     list-style-type: none;
+    //     display: flex;
+    //     align-items: center;
+    // }
 
-    &__item {
-        width: 56px;
-        margin-right: 1.25rem;
-    }
+    // &__item {
+    //     width: 56px;
+    //     margin-right: 1.25rem;
+    // }
 
-    &__link {
-        @include link-reset;
-        @include heading-tertiary;
-    }
+    // &__link {
+    //     @include link-reset;
+    //     @include heading-tertiary;
+    // }
 
     &__login-form {
         display: none;
