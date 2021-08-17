@@ -50,6 +50,10 @@ $header-height-tab-desk: 54px;
     &__logo {
         height: 43px;
         margin-right: 42px;
+
+        @include desktop {
+            margin-right: 80px;
+        }
     }
 
     &__login-form {
