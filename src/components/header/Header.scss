@@ -49,6 +49,53 @@ $header-height-tab-desk: 54px;
 
     &__logo {
         height: 43px;
+        margin-right: 42px;
+    }
+
+    &__nav {
+        display: none;
+
+        @include tablet {
+            height: inherit;
+            display: grid;
+            place-items: center;
+        }
+
+    }
+
+    &__items {
+        height: inherit;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        width: 56px;
+        margin-right: 1.25rem;
+    }
+
+    &__link {
+        @include link-reset;
+        @include heading-tertiary;
+    }
+
+    &__login-form {
+        display: none;
+
+        @include tablet {
+            height: inherit;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+
+    &__input {
+        height: 20px;
+        padding: 0 $padding-tablet-m;
+        border: none;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, .25);
     }
 
     &__button {
@@ -57,6 +104,12 @@ $header-height-tab-desk: 54px;
         max-height: 22px;
         padding: 0;
         margin-right: 14px;
+
+        &--mob {
+            @include tablet {
+                display: none;
+            }
+        }
     }
 
     &__hamburger-container {

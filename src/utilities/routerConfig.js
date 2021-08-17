@@ -4,6 +4,7 @@ export const contactUsURL = '/contact-us';
 export const dashboardURL = '/dashboard';
 export const loginRegisterURL = '/login-register';
 export const patronPortalURL = '/patron-portal';
+export const faqURL = '/faqs';
 
 export const reportsURL = `${dashboardURL}/reports`;
 export const foundItemURL = `${dashboardURL}/found-item`;

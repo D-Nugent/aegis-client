@@ -31,13 +31,13 @@
 
     &-secondary {
         @extend .button;
-        // color: $color-emphasis-primary;
-        // background-color: $color-field;
+        color: $color-emphasis-primary;
+        background-color: $color-field;
     }
 
     &-tertiary {
         @extend .button;
-        // color: $color-field;
-        // background-color: $color-secondary;
+        color: $color-field;
+        background-color: $color-secondary;
     }
 }
