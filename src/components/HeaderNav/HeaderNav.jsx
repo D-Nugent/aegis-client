@@ -4,7 +4,7 @@ import { aboutURL, loginRegisterURL, faqURL } from '../../utilities/routerConfig
 
 function HeaderNav() {
     return (
-        <nav className="header-nav__">
+        <nav className="header-nav">
             <ul className="header-nav__items">
                 <li className="header-nav__item">
                     <NavLink className="header-nav__link" activeClassName={null} to={aboutURL}>About

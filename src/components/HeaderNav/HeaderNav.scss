@@ -1,6 +1,6 @@
 @use "../../styles/mixins" as *;
 @use "../../styles/fonts" as *;
-
+@use "../../styles/variables" as *;
 
 .header-nav {
     display: none;
@@ -26,5 +26,9 @@
     &__link {
         @include link-reset;
         @include heading-secondary;
+
+        &:hover {
+            color: $color-emphasis-primary;
+        }
     }
 }
