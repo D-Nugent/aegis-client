@@ -34,22 +34,6 @@ function Header() {
                 <div className="header__column">
                     <img className="header__logo" src={AegisLogo} alt="logo" />
                     <HeaderNav />
-                    {/* <nav className="header__nav">
-                        <ul className="header__items">
-                            <li className="header__item">
-                                <NavLink className="header__link" to={aboutURL}>About
-                                </NavLink>
-                            </li>
-                            <li className="header__item">
-                                <NavLink className="header__link" to={faqURL}>FAQ's
-                                </NavLink>
-                            </li>
-                            <li className="header__item">
-                                <NavLink className="header__link" to={loginRegisterURL}>Register
-                                </NavLink>
-                            </li>
-                        </ul>
-                    </nav> */}
                 </div>
                 <div className="header__column">
                     {!user && 

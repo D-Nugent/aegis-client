@@ -52,34 +52,6 @@ $header-height-tab-desk: 54px;
         margin-right: 42px;
     }
 
-    // &__nav {
-    //     display: none;
-
-    //     @include tablet {
-    //         height: inherit;
-    //         display: grid;
-    //         place-items: center;
-    //     }
-
-    // }
-
-    // &__items {
-    //     height: inherit;
-    //     list-style-type: none;
-    //     display: flex;
-    //     align-items: center;
-    // }
-
-    // &__item {
-    //     width: 56px;
-    //     margin-right: 1.25rem;
-    // }
-
-    // &__link {
-    //     @include link-reset;
-    //     @include heading-tertiary;
-    // }
-
     &__login-form {
         display: none;
 
@@ -87,7 +59,7 @@ $header-height-tab-desk: 54px;
             height: inherit;
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 19px;
         }
     }
 
@@ -96,6 +68,10 @@ $header-height-tab-desk: 54px;
         padding: 0 $padding-tablet-m;
         border: none;
         box-shadow: 4px 4px 8px rgba(0, 0, 0, .25);
+
+        @include tablet {
+            width: 118px;
+        }
     }
 
     &__button {
