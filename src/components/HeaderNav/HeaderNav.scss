@@ -27,7 +27,7 @@
         @include link-reset;
         @include heading-secondary;
 
-        &:hover {
+        &:hover, &:active {
             color: $color-emphasis-primary;
         }
     }
