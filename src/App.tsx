@@ -22,8 +22,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        <h1>AEGIS</h1>
-
         <Switch>
           <Route exact path={homeURL} component={HomePage} />
           <Route path={aboutURL} component={AboutPage} />

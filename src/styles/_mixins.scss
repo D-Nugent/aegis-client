@@ -1,11 +1,5 @@
 @use "./variables" as *;
 
-@mixin mobile {
-    @media (min-width: $screen-mobile) {
-        @content;
-    };
-};
-
 @mixin tablet {
     @media (min-width: $screen-tablet) {
         @content;
@@ -17,3 +11,107 @@
         @content;
     };
 };
+
+// Margin Mixins
+
+// Example 1:
+// input: @include margin()
+// renders:
+// At mobile: margin: .75rem 
+// At tablet: margin: 1rem
+// At desktop: margin: 1rem
+
+// Example 2:
+// input: @include margin(m,bottom,left)
+// renders:
+// At mobile: margin-botom: .1rem; margin-left: 1rem
+// At tablet: margin-botom: 1.5rem; margin-left: 1.5rem
+// At desktop: margin-botom: 1.5rem; margin-left: 1.5rem
+
+@mixin margin($size: s,$directions...) {
+    @if $size == 's' {
+        @if length($directions) != 0 {
+            @for $i from 0 to length($directions) {
+                margin-#{nth($directions, $i + 1)}: $margin-mobile-s; 
+            }
+        } @else {
+            margin: $margin-mobile-s;
+        }
+        @include tablet {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $margin-tablet-s; 
+                }
+            } @else {
+                margin: $margin-tablet-s;
+            }
+        }
+        @include desktop {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $margin-desktop-s; 
+                }
+            } @else {
+                margin: $margin-desktop-s;
+            }
+        }
+    };
+
+    @if $size == 'm' {
+        @if length($directions) != 0 {
+            @for $i from 0 to length($directions) {
+                margin-#{nth($directions, $i + 1)}: $margin-mobile-m; 
+            }
+        } @else {
+            margin: $margin-mobile-m;
+        }
+        @include tablet {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $margin-tablet-m; 
+                }
+            } @else {
+                margin: $margin-tablet-m;
+            }
+        }
+        @include desktop {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $margin-desktop-m; 
+                }
+            } @else {
+                margin: $margin-desktop-m;
+            }
+        }
+    };
+
+    @if $size == 'l' {
+        @if length($directions) != 0 {
+            @for $i from 0 to length($directions) {
+                margin-#{nth($directions, $i + 1)}: $margin-mobile-l; 
+            }
+        } @else {
+            margin: $margin-mobile-l;
+        }
+        @include tablet {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $margin-tablet-l; 
+                }
+            } @else {
+                margin: $margin-tablet-l;
+            }
+        }
+        @include desktop {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $margin-desktop-l; 
+                }
+            } @else {
+                margin: $margin-desktop-l;
+            }
+        }
+    }
+}
+
+// Padding Mixins

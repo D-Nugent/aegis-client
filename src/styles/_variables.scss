@@ -1,4 +1,18 @@
 // Colour variables created in AEG-25
+  // Below swatch is based off figma but may be swapped out
+$color-primary: #143058;
+$color-secondary: #0f2544;
+$color-tertiary: #435979;
+$color-quarternary: #D0D6DE;
+
+$color-offset-primary: #EEEBE8;
+$color-offset-secondary: #F9F8F7;
+
+$color-field: #FCFCFB;
+
+$color-emph-primary: #FE5C32;
+$color-emph-secondary: #FCCD7A;
+$color-emph-tertiary: #FBA919;
 
 // Colour - Text
 $text-primary: #0f2544;
@@ -12,17 +26,16 @@ $screen-tablet: 768px;
 $screen-desktop: 1280px;
 
 // Margins
-$margin-mobile-xs: .5rem;
+$margin-xs: .5rem;
+
 $margin-mobile-s: .75rem;
 $margin-mobile-m: 1rem;
 $margin-mobile-l: 1.5rem;
 
-$margin-tablet-xs: .5rem;
 $margin-tablet-s: 1rem;
 $margin-tablet-m: 1.5rem;
 $margin-tablet-l: 2rem;
 
-$margin-desktop-xs: .5rem;
 $margin-desktop-s: 1rem;
 $margin-desktop-m: 1.5rem;
 $margin-desktop-l: 3rem;
