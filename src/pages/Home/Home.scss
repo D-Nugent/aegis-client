@@ -25,7 +25,7 @@
 
   &__title{
     @include heading-primary;
-    @include margin(m,bottom);
+    @include responsiveMargin(m,bottom);
   }
   
   &__start{
@@ -61,7 +61,7 @@
 
   &__title{
     @include heading-primary;
-    @include margin(m,bottom);
+    @include responsiveMargin(m,bottom);
     color: $text-emphasis;
   }
 }
@@ -75,7 +75,7 @@
   }
 
   &__search-wrapper{
-    @include margin(s,top);
+    @include responsiveMargin(s,top);
   }
 }
 

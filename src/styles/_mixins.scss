@@ -28,7 +28,7 @@
 // At tablet: margin-botom: 1.5rem; margin-left: 1.5rem
 // At desktop: margin-botom: 1.5rem; margin-left: 1.5rem
 
-@mixin margin($size: s,$directions...) {
+@mixin responsiveMargin($size: s,$directions...) {
     @if $size == 's' {
         @if length($directions) != 0 {
             @for $i from 0 to length($directions) {
@@ -115,3 +115,117 @@
 }
 
 // Padding Mixins
+
+@mixin responsivePadding($size: s,$directions...) {
+    @if $size == 'xs' {
+        @if length($directions) != 0 {
+            @for $i from 0 to length($directions) {
+                margin-#{nth($directions, $i + 1)}: $padding-mobile-xs; 
+            }
+        } @else {
+            margin: $padding-mobile-xs;
+        }
+        @include tablet {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $padding-tablet-xs; 
+                }
+            } @else {
+                margin: $padding-tablet-xs;
+            }
+        }
+        @include desktop {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $padding-desktop-xs; 
+                }
+            } @else {
+                margin: $padding-desktop-xs;
+            }
+        }
+    };
+
+    @if $size == 's' {
+        @if length($directions) != 0 {
+            @for $i from 0 to length($directions) {
+                margin-#{nth($directions, $i + 1)}: $padding-mobile-s; 
+            }
+        } @else {
+            margin: $padding-mobile-s;
+        }
+        @include tablet {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $padding-tablet-s; 
+                }
+            } @else {
+                margin: $padding-tablet-s;
+            }
+        }
+        @include desktop {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $padding-desktop-s; 
+                }
+            } @else {
+                margin: $padding-desktop-s;
+            }
+        }
+    };
+
+    @if $size == 'm' {
+        @if length($directions) != 0 {
+            @for $i from 0 to length($directions) {
+                margin-#{nth($directions, $i + 1)}: $padding-mobile-m; 
+            }
+        } @else {
+            margin: $padding-mobile-m;
+        }
+        @include tablet {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $padding-tablet-m; 
+                }
+            } @else {
+                margin: $padding-tablet-m;
+            }
+        }
+        @include desktop {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $padding-desktop-m; 
+                }
+            } @else {
+                margin: $padding-desktop-m;
+            }
+        }
+    };
+
+    @if $size == 'l' {
+        @if length($directions) != 0 {
+            @for $i from 0 to length($directions) {
+                margin-#{nth($directions, $i + 1)}: $padding-mobile-l; 
+            }
+        } @else {
+            margin: $padding-mobile-l;
+        }
+        @include tablet {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $padding-tablet-l; 
+                }
+            } @else {
+                margin: $padding-tablet-l;
+            }
+        }
+        @include desktop {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $padding-desktop-l; 
+                }
+            } @else {
+                margin: $padding-desktop-l;
+            }
+        }
+    }
+}
