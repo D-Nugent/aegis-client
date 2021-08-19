@@ -1,6 +1,6 @@
 import React from 'react';
 
-function HeaderLogin(props) {
+function HeaderLogin() {
     return (
         <div>
             

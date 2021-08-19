@@ -1,6 +1,6 @@
 import React from 'react';
 
-function LoginRegister(props) {
+function LoginRegister() {
     return (
         <div>
             LOGIN or REGISTER
