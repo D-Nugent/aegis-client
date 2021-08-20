@@ -9,10 +9,10 @@ import {
   patronPortalURL   
 } from './utilities/routerConfig';
 import Header from './components/Header/Header';
-import HomePage from './pages/Home/Home';
-import AboutPage from './pages/About/About.jsx';
-import ContactPage from './pages/Contact/Contact.jsx';
-import DashboardPage from './pages/Dashboard/Dashboard.jsx';
+import HomePage from './pages/homeu/Home';
+import AboutPage from './pages/aboutu/About.js';
+import ContactPage from './pages/contactu/Contact.js';
+import DashboardPage from './pages/dashboardu/Dashboard.js';
 import LoginRegisterPage from './pages/LoginRegister/LoginRegister.jsx';
 import PatronPortalPage from './pages/PatronPortal/PatronPortal.jsx';
 
