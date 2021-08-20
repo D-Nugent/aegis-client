@@ -1,5 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { aboutURL, customerFaqURL } from '../../utilities/routerConfig';
+// import businessMan from '../../assets/images/business-man.jpeg';
 import './Home.scss';
+import '../../styles/globals.scss';
 
 // Component Will eventually be broken down into:
 // <ReportingItem>
@@ -12,45 +16,180 @@ import './Home.scss';
 
 function Home() {
     return (
+      <>
       <main className="home">
-        <section className="reporting">
-          <h2 className="reporting__title">Reporting a Lost Item? <span className="reporting__start">Start Here.</span></h2>
-          <div className="location">
-            <label htmlFor="locationSearch" className="location__title">
-              Hotel Location:
-            </label>
-            <div className="location__search-wrapper search-bar">
-              <input
-                className="location__search"
-                type="text"
-                // Not using type="search" to avoid default styling
-                name="locationSearch" 
-                id="locationSearch" />
-              <button className="location__button">Go</button>
+        <section className="user-prompts">
+          <section className="reporting">
+            <h2 className="reporting__title">Reporting a Lost Item? <span className="reporting__start">Start Here.</span></h2>
+            <div className="location">
+              <label htmlFor="locationSearch" className="location__title">
+                Hotel Location:
+              </label>
+              <div className="location__search-wrapper search-bar">
+                <input
+                  className="location__search"
+                  type="text"
+                  // Not using type="search" to avoid default styling
+                  name="locationSearch" 
+                  placeholder="Hotel Name"
+                  id="locationSearch" />
+                <button className="location__button">Go</button>
+              </div>
+              <p className="location__expl">
+                After selecting the location or business you'll be taken to our quick and easy form to submit your lost item query.
+              </p>
             </div>
-            <p className="location__expl">
-              After selecting the location or business you'll be taken to our quick and easy form to submit your lost item query.
-            </p>
+          </section>
+          <svg className="svg__top-curve--clip-path" viewBox="0 0 320 167">
+            <defs>
+              <clipPath id="svgPathTopCurve" clipPathUnits="objectBoundingBox">
+                <path d="M1 0C0.531574 0.0332416 0.571931 0.606902 0.439015 0.764107C0.310989 0.915528 0.166843 0.996916 0.0171744 0.999914H1V0Z" fill="#143058"/>
+              </clipPath>
+            </defs>
+          </svg>
+          <svg className="svg__top-curve" preserveAspectRatio="none" viewBox="0 0 320 167" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M320 1C170.104 6.51009 183.018 101.599 140.485 127.658C99.5164 152.757 53.3898 166.248 5.49582 166.745H320V1Z" fill="#143058"/>
+            <path stroke="#143058" strokeWidth="0.250391" d="M5.49582 166.745C53.3898 166.248 99.5164 152.757 140.485 127.658C183.018 101.599 170.104 6.51009 320 1V166.745H5.49582ZM5.49582 166.745H0C1.8344 166.764 3.6664 166.764 5.49582 166.745Z"/>
+          </svg>
+          <div className="update-wrapper">
+            <section className="update">
+              <h2 className="update__title">Looking for an update?</h2>
+              <div className="reference">
+                <label htmlFor="referenceSearch" className="reference__title">
+                  Enter your reference number:
+                </label>
+                <div className="reference__search-wrapper search-bar">
+                  <input
+                    className="reference__search"
+                    type="text"
+                    // Not using type="search" to avoid default styling
+                    name="referenceSearch" 
+                    placeholder="e.g. G69f3tu6"
+                    id="referenceSearch" />
+                  <button className="reference__button">Go</button>
+                </div>
+              </div>
+            </section>
           </div>
         </section>
-        <section className="update">
-          <h2 className="update__title">Looking for an update?</h2>
-          <div className="reference">
-            <label htmlFor="referenceSearch" className="reference__title">
-              Enter your reference number:
-            </label>
-            <div className="reference__search-wrapper search-bar">
-              <input
-                className="reference__search"
-                type="text"
-                // Not using type="search" to avoid default styling
-                name="referenceSearch" 
-                id="referenceSearch" />
-              <button className="reference__button">Go</button>
+        <div className="about-intro-wrapper">
+          <section className="about-intro">
+            <h2 className="about-intro__title">Aegis is...</h2>
+            <div className="about-intro__summary">
+              <p className="about-intro__msg">
+                A secure platform for reporting, logging and tracking lost and found items. By enhancing
+                the communication process the interface eases the process for clients and users alike. 
+              </p>
+              <Link to={aboutURL} className="about-intro__more">
+                Learn More
+                <svg className="svg-icon__chevron" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="14.7736" height="3.21165" transform="matrix(0.664353 0.747419 -0.664353 0.747419 2.18512 0)" fill="#FE5C32"/>
+                  <rect width="14.7736" height="3.21165" transform="matrix(0.664353 -0.747419 0.664353 0.747419 0 19.5995)" fill="#FE5C32"/>
+                </svg>
+              </Link>
             </div>
+          </section>
+          <aside className="about-intro-image">
+            <svg className="svg__about--clip-path" viewBox="0 0 1 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <clipPath id="svgPathAbout" clipPathUnits="objectBoundingBox">
+                  <path d="M0.522313 0.351131C0.440611 0.528648 -0.218841 0.556404 0.0748971 0.725826C0.119428 0.747896 0.185782 0.74898 0.185782 0.782321C0.185782 0.797597 0.177752 0.797597 0.194885 0.808099C0.212018 0.818601 0.327106 0.831967 0.341559 0.833877C0.391344 0.841515 0.630631 0.851062 0.852252 0.902618C0.946407 0.921085 0.998684 0.969404 1 1V0C0.925239 0.0419395 0.655969 0.0607313 0.604015 0.173614L0.522313 0.351131Z" fill="none"/>
+                </clipPath>
+              </defs>
+            </svg>
+          </aside>
+        </div>
+        <div className="faq-intro-wrapper"> 
+          <aside className="faq-intro-image">
+            <svg className="svg__faq--clip-path" viewBox="0 0 1 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <clipPath id="svgPathFaq" clipPathUnits="objectBoundingBox">
+                  <path d="M0.288531 0.31495C0.347904 0.431728 0.444537 0.428472 0.783303 0.443138C1.12207 0.457803 0.96241 0.633741 0.96241 0.633741C0.96241 0.633741 0.823742 0.716902 0.858508 0.788774C0.960334 0.895794 0.0467701 0.819719 0 1L0.00328947 0.0751689C0.475301 -0.152347 0.229159 0.198172 0.288531 0.31495Z" fill="none"/>
+                </clipPath>
+              </defs>
+            </svg>
+          </aside>
+          <section className="faq-intro">
+            <h2 className="faq-intro__title">FAQ's</h2>
+            <div className="faq-intro__summary">
+              <p className="faq-intro__msg">
+                We all have questions from time-to-time. Not a problem! We're here to help. So that we can
+                best assist you, are you a client or a user? 
+              </p>
+              <div className="faq-intro__link-wrapper">
+                <Link to={customerFaqURL} className="faq-intro__link button--primary">
+                  Client
+                </Link>
+                <Link to={customerFaqURL} className="faq-intro__link button--secondary">
+                  User
+                </Link>
+              </div>
+            </div>
+          </section>
+        </div>
+        <section className="contact-us">
+          <div className="contact-us__wrapper">
+            <div className="contact-us__summary">
+              <h2 className="contact-us__title">Contact Us</h2>
+              <p className="contact-us__msg">
+                Still have some questions that our <Link to={customerFaqURL} className="contact-us__faq-link">FAQ's</Link> didn't answer?
+                Or are you just wanting to talk? either way submit your query below and we will respond within two business days.
+              </p>
+              <p className="contact-us__msg --expanded">
+                If you are looking for an update on a lost item please enter your reference number above or alternatively
+                contact the hotel directly.
+              </p>
+            </div>
+            <form className="contact-form">
+              <label htmlFor="contactName" className="contact-form__name">
+                Name
+              </label>
+              <input 
+                type="text" 
+                name="contactName" 
+                id="contactName" 
+                className="contact-form__name-field" 
+                placeholder="Enter your name here"
+              />
+              <label htmlFor="contactEmail" className="contact-form__email">
+                Email
+              </label>
+              <input 
+                type="email" 
+                name="contactEmail" 
+                id="contactEmail" 
+                className="contact-form__email-field" 
+                placeholder="Enter your email here"
+              />
+              <label htmlFor="contactSubject" className="contact-form__subject">
+                Subject
+              </label>
+              <input 
+                type="text" 
+                name="contactSubject" 
+                id="contactSubject" 
+                className="contact-form__subject-field" 
+                placeholder="What is your message regarding?"
+              />
+              <label htmlFor="contactMessage" className="contact-form__message">
+                Message
+              </label>
+              <textarea 
+                name="contactMessage" 
+                id="contactMessage" 
+                className="contact-form__message-field"
+                placeholder="Please provide a detailed message so that we may determine how best to assist you"
+              >
+              </textarea>
+              <button type="submit" className="contact-form__submit button--primary">Submit</button>
+            </form>
           </div>
         </section>
       </main>
+      <button className="return-to-top">
+        Return to Top
+      </button>
+      </>
     );
 }
 
