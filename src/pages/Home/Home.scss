@@ -38,8 +38,6 @@
 
   @include tablet {
     width: 65%;
-    position: relative;
-    bottom: 6vh;
     height: 65vw;
   }
 
@@ -92,7 +90,7 @@
 }
 
 .svg__top-curve--clip-path{
-  width: 100vw;
+  width: 100%;
   z-index: -1;
   position: absolute;
   display: none;
@@ -192,7 +190,7 @@
 
     &:hover{
       cursor: pointer;
-      box-shadow: rgba(0, 0, 0, .5);
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
     }
   }
 }
@@ -334,13 +332,44 @@
   width: 100%;
 }
 
+.svg__phone{
+  display: none;
+  position: absolute;
+  width: 35vmin;
+  top: -15vmin;
+  right: 25vmin;
+
+  @include tablet{
+    display: block;
+  }
+
+  @include desktop{
+    width: 45vmin;
+    top: 10vmax;
+    left: 35vmax;
+  }
+
+  &-path{
+    stroke-dasharray: 2255;
+    transition: stroke-dashoffset .8s ease-in-out;
+  }
+}
+// If we decide to make the path just animate at set scrollPoints then we can add the below
+// keyframes as an animation for an '--active' class
+
+// @keyframes drawPhone {
+//   0% {stroke-dashoffset: 2226}
+//   100% {stroke-dashoffset: 0}
+// }
+
 .contact-us{
   padding: 0 15% 20%;
   height: 100vh;
   max-height: 730px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
+  position: relative;
 
   &__wrapper{
     display: flex;
@@ -370,6 +399,7 @@
     @include responsiveMargin(m,top);
     @include heading-quaternary;
     color: $text-offset;
+    z-index: 1;
 
     &.--expanded{
       display: none;
@@ -392,6 +422,7 @@
   flex-direction: column;
   width: 100%;
   max-width: 240px;
+  z-index: 1;
 
   @include desktop {
     max-width: 300px;
@@ -422,23 +453,5 @@
   &__submit{
     @include responsiveMargin(m,top);
     align-self: flex-end;
-  }
-}
-
-.return-to-top{
-  @include heading-tertiary;
-  position: absolute;
-  bottom: 4vmin;
-  right: 4vmin;
-  width: 164px;
-  height: 32px;
-  background-color: $color-emph-primary;
-  color: $text-offset;
-  border-radius: 32px;
-  border: 0;
-  box-shadow: rgba(0, 0, 0, .25);
-
-  &:hover{
-    box-shadow: rgba(0, 0, 0, .5);
   }
 }
