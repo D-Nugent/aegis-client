@@ -198,6 +198,7 @@
 .about-intro-wrapper{
   display: flex;
   width: 100%;
+  position: relative;
 }
 
 .about-intro {
@@ -241,6 +242,29 @@
   }
 }
 
+.svg__lock{
+  display: none;
+  position: absolute;
+  width: 25vmax;
+  top: -8vmin;
+  right: 25vmax;
+
+  @include tablet{
+    display: block;
+  }
+
+  @include desktop{
+    width: 40vmin;
+    right: 20vmax;
+  }
+
+  &-path{
+    stroke-dasharray: 1490;
+    stroke-dashoffset: 1490;
+    transition: stroke-dashoffset .8s ease-in-out;
+  }
+}
+
 .about-intro-image{
   display: none;
   background-image: url('../../assets/images/business-man.jpeg');
@@ -265,10 +289,35 @@
 .faq-intro-wrapper{
   display: flex;
   flex-direction: column;
+  position: relative;
 
   @include tablet{
     flex-direction: row;
     align-items: flex-end;
+  }
+}
+
+.svg__question-mark{
+  display: none;
+  position: absolute;
+  width: 20vmax;
+  top: -8vmin;
+  left: 15vmax;
+
+  @include tablet{
+    display: block;
+  }
+
+  @include desktop{
+    width: 40vmin;
+    bottom: 20vmax;
+    left: 20vmax;
+  }
+
+  &-path{
+    stroke-dasharray: 956;
+    stroke-dashoffset: 956;
+    transition: stroke-dashoffset .8s ease-in-out;
   }
 }
 
@@ -345,22 +394,27 @@
 
   @include desktop{
     width: 45vmin;
-    top: 10vmax;
+    bottom: 10vmax;
     left: 35vmax;
   }
 
   &-path{
     stroke-dasharray: 2255;
+    stroke-dashoffset: 2255;
     transition: stroke-dashoffset .8s ease-in-out;
+    animation: drawPhone 4s ease-in-out forwards;
+
+    // &--active{
+    // }
   }
 }
 // If we decide to make the path just animate at set scrollPoints then we can add the below
 // keyframes as an animation for an '--active' class
 
-// @keyframes drawPhone {
-//   0% {stroke-dashoffset: 2226}
-//   100% {stroke-dashoffset: 0}
-// }
+@keyframes drawPhone {
+  0% {stroke-dashoffset: 2226}
+  100% {stroke-dashoffset: 0}
+}
 
 .contact-us{
   padding: 0 15% 20%;
@@ -389,6 +443,7 @@
   
   &__summary{
     width: 100%;
+    z-index: 1;
 
     @include tablet{
       width: 50%;
@@ -399,7 +454,6 @@
     @include responsiveMargin(m,top);
     @include heading-quaternary;
     color: $text-offset;
-    z-index: 1;
 
     &.--expanded{
       display: none;

@@ -24,9 +24,9 @@
 // Example 2:
 // input: @include margin(m,bottom,left)
 // renders:
-// At mobile: margin-botom: .1rem; margin-left: 1rem
-// At tablet: margin-botom: 1.5rem; margin-left: 1.5rem
-// At desktop: margin-botom: 1.5rem; margin-left: 1.5rem
+// At mobile: margin-bottom: .1rem; margin-left: 1rem
+// At tablet: margin-bottom: 1.5rem; margin-left: 1.5rem
+// At desktop: margin-bottom: 1.5rem; margin-left: 1.5rem
 
 @mixin responsiveMargin($size: s,$directions...) {
     @if $size == 's' {
