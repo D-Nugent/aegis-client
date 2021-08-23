@@ -35,13 +35,9 @@ export const useScrollTrack = () => {
   }
   
   useEffect(() => {
-    function scrollHandler(){
-      debounce(scrollPosUpdate)();
-    }
-
-    window.addEventListener('scroll',scrollHandler);
+    window.addEventListener('scroll',debounce(scrollPosUpdate));
     return () => {
-      window.removeEventListener('scroll',scrollHandler);
+      window.removeEventListener('scroll',debounce(scrollPosUpdate));
     }
   }, [])
   return scrollPos as scrollInterface;
