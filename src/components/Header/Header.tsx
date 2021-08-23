@@ -6,6 +6,10 @@ import HeaderNav from '../HeaderNav/HeaderNav';
 import HamburgerIcon from '../../assets/icons/hamburger-menu.svg';
 import { homeURL } from '../../utilities/routerConfig';
 
+interface User {
+    username : String,
+    password: String
+};
 
 function Header() {
     
@@ -14,11 +18,15 @@ function Header() {
     // 
 
     const [ showMenu, setShowMenu ] = useState(true);
+    const [ loginData, setLoginData ] = useState({ username : "", password : ""});
 
-    const handleLoginMob = () => console.log("Logged In");
+    const handleLoginMob = (): void => console.log("Logged In");
 
-    const handleLogin = e => {
+    const handleLogin = (e : any): void => {
         e.preventDefault();
+
+        if (!loginData.username || !loginData.password) return console.log("insufficient login data supplied");
+
         const username = e.target.username.value;
         const password = e.target.password.value;
         console.log({ username, password });
@@ -28,6 +36,13 @@ function Header() {
         // 
     };
 
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+        setLoginData({
+            ...loginData,
+            [e.target.name] : e.target.value
+        });
+    };
+
     const handleShowModel = () => setShowMenu(!showMenu);
 
     return (
@@ -35,7 +50,7 @@ function Header() {
             <div className="header__spacer"></div>
             <header className="header">
                 <div className="header__column">
-                    <Link exact to={homeURL}>
+                    <Link to={homeURL}>
                         <img className="header__logo" src={AegisLogo} alt="logo" />
                     </Link>
                     <HeaderNav />
@@ -44,10 +59,10 @@ function Header() {
                     {!user && 
                         <form className="header__login-form" onSubmit={handleLogin}>
                             <label htmlFor="username">
-                                <input className="header__input" type="text" name="username" placeholder="username..." />
+                                <input className="header__input" type="text" name="username" value={loginData.username} placeholder="username..." onChange={handleChange} />
                             </label>
                             <label htmlFor="password">
-                                <input className="header__input" type="text" name="password" placeholder="password..." />
+                                <input className="header__input" type="text" name="password" value={loginData.password} placeholder="password..." onChange={handleChange} />
                             </label>
                             <button className="button-primary header__button" type="submit" >Login</button>
                         </form>
