@@ -6,11 +6,6 @@ import HeaderNav from '../HeaderNav/HeaderNav';
 import HamburgerIcon from '../../assets/icons/hamburger-menu.svg';
 import { homeURL } from '../../utilities/routerConfig';
 
-interface User {
-    username : String,
-    password: String
-};
-
 function Header() {
     
     // TEMP STATE - to be deleted
@@ -30,6 +25,7 @@ function Header() {
         const { username, password } = loginData;
         if (username.length === 0 || password.length === 0) return console.log("insufficient data provided");
         console.log(username, password);
+
         // Temp
         setUser(true);
         // 
@@ -42,7 +38,7 @@ function Header() {
         });
     };
 
-    const handleShowModel = () => setShowMenu(!showMenu);
+    const handleShowModel = (): void => setShowMenu(!showMenu);
 
     return (
         <div>
