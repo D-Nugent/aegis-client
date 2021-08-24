@@ -1,0 +1,122 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+.about-page {
+    
+    &__section {
+        // Update when header is merged
+        // height: calc(100vh - 46px);
+        min-height: 500px;
+
+        padding-left: 48px;
+        padding-right: 48px;
+
+        @include tablet {
+            // Update when header is merged
+            height: calc(100vh - 54px);
+        }
+
+        &--alt {
+            background-color: #143058;
+        }
+    }
+
+    &__header {
+        margin-top: 97px;
+        margin-bottom: 12px;
+    }
+
+    &__title {
+        position: relative;
+        font-size: 21px;
+        font-weight: 400;
+        padding-bottom: 33px;
+        line-height: 24.61px;
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 17px;
+            width: 100px;
+            height: 4px;
+            background-color: $text-primary;
+        }
+    }
+
+    &__secondary-heading {
+        color: $text-emphasis;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 21.09px;
+        margin-bottom: 8px;
+        
+        &--emphasis {
+            font-style: italic;
+        }
+    }
+
+    &__text {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14.06px;
+
+        margin-bottom: 8px;
+
+        &--alt {
+            color: #fcfcfb;
+        }
+    }
+
+    &__preview-container {
+        // Width is incorrect due to section padding
+        width: 100%;
+        min-height: 209px; 
+        padding-top: 10px;
+        margin-bottom: 11px;
+        display: grid;
+        place-items: center;
+    }
+
+    &__why-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+        padding-bottom: 97px;
+    }
+
+    &__why-items {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__why-item {
+        display: grid;
+        place-items: center;
+        margin-bottom: 8px;
+    }
+
+    &__why-text {
+        color: #fcfcfb;
+        font-size: 18px;
+        line-height: 21.09px;
+        margin-top: 8px;
+    }
+
+    &__profile-container {
+        margin-top: 50px;
+        width: 131px;
+        height: 124px; 
+    }
+
+    &__profile-img {
+        // display: block;
+        // width: 80px;
+        // height: 80px;
+        // border-radius: 50%;
+        // background-color: grey;
+    }
+}

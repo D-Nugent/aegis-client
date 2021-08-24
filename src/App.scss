@@ -1,5 +1,6 @@
 @use "./styles/fonts" as *;
 @use "./styles/variables" as *;
+@use "./styles/mixins" as *;
 
 
 *, *::before, *::after {
@@ -14,5 +15,10 @@ html, body, textarea, button {
 }
 
 html {
-  @include text-regular;
+  // @include text-regular;
+  background-color: #e5e5e5;
+
+  @include mobile {
+    width: 100%;
+  }
 }
