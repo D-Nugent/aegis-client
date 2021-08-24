@@ -28,7 +28,7 @@ function About() {
                 </div>
                 <h2 className="about-page__secondary-heading">Why Use Aegis?</h2>
                 <div className="about-page__why-container">
-                    <div>
+                    <div className="about-page__why-text-container">
                         <p className="about-page__text about-page__text--alt">Lorem Ipsum Text here. A secure platform for reporting, logging and tracking lost and found items. Intended to ease the process for clients and users alike.</p>
                         <p className="about-page__text about-page__text--alt">Lorem Ipsum Text here. A secure platform for reporting, logging and tracking lost and found items. Intended to ease the process for clients and users alike.</p>
                     </div>

@@ -86,7 +86,14 @@
         padding-bottom: 97px;
     }
 
+    &__why-text-container {
+        min-width: 55%;
+        max-width: 154px;
+    }
+
     &__why-items {
+        position: relative;
+        right: 0;
         list-style-type: none;
         display: flex;
         flex-direction: column;
