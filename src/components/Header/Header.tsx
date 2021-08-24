@@ -22,15 +22,14 @@ function Header() {
 
     const handleLoginMob = (): void => console.log("Logged In");
 
-    const handleLogin = (e : any): void => {
+    const handleLogin = (e: React.SyntheticEvent): void => {
         e.preventDefault();
 
         if (!loginData.username || !loginData.password) return console.log("insufficient login data supplied");
 
-        const username = e.target.username.value;
-        const password = e.target.password.value;
-        console.log({ username, password });
-
+        const { username, password } = loginData;
+        if (username.length === 0 || password.length === 0) return console.log("insufficient data provided");
+        console.log(username, password);
         // Temp
         setUser(true);
         // 
@@ -57,7 +56,7 @@ function Header() {
                 </div>
                 <div className="header__column">
                     {!user && 
-                        <form className="header__login-form" onSubmit={handleLogin}>
+                        <form className="header__login-form" onSubmit={e => handleLogin(e)}>
                             <label htmlFor="username">
                                 <input className="header__input" type="text" name="username" value={loginData.username} placeholder="username..." onChange={handleChange} />
                             </label>
