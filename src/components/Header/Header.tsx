@@ -19,11 +19,9 @@ function Header() {
 
     const handleLogin = (e: React.SyntheticEvent): void => {
         e.preventDefault();
-
+        const { username, password } = loginData;
         if (!loginData.username || !loginData.password) return console.log("insufficient login data supplied");
 
-        const { username, password } = loginData;
-        if (username.length === 0 || password.length === 0) return console.log("insufficient data provided");
         console.log(username, password);
 
         // Temp
