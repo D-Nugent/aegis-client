@@ -1,9 +1,19 @@
-// Colour variables created in AEG-25
+// Colours
+$color-primary: #143058;
+$color-secondary: #0f2544;
+$color-tertiary: #435979;
+$color-quarternary: #d0d6de;
+$color-offset-primary: #eeebe8;
+$color-offset-secondary: #f9f8f7;
+$color-field: #fcfcfb;
+$color-emphasis-primary: #fe5c32;
+$color-emphasis-secondary: #fba919;
+$color-emphasis-tertiary: #fccd7a;
 
-// Colour - Text
-$text-primary: #0f2544;
-$text-offset: #eeebe8;
-$text-emphasis: #fe5c32;
+// Colours - Text
+$text-primary: $color-secondary;
+$text-offset: $color-offset-primary;
+$text-emphasis: $color-emphasis-primary;
 
 // Resp Design
 $screen-mobile: 280px;

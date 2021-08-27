@@ -1,6 +1,6 @@
+@use "./styles/globals" as *;
 @use "./styles/fonts" as *;
 @use "./styles/variables" as *;
-
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -11,8 +11,4 @@
 html, body, textarea, button {
   color: $text-primary;
   font-family: 'Roboto', 'Raleway', 'Ubuntu', sans-serif;
-}
-
-html {
-  @include text-regular;
 }

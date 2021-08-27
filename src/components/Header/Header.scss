@@ -1,0 +1,105 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+@use "../../styles/fonts" as *;
+
+$header-height-mob: 46px;
+$header-height-tab-desk: 54px;
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $header-height-mob;
+    padding: 0 $padding-mobile-l;
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-offset-secondary;
+    
+    @include tablet {
+        height: $header-height-tab-desk;
+        padding: 0 $padding-tablet-s;
+    }
+
+    @include desktop {
+        padding: 0 $padding-desktop-s;
+    }
+
+    &__spacer {
+        width: 100%;
+        height: $header-height-mob;
+
+        @include tablet {
+            height: $header-height-tab-desk;
+        }
+    }
+
+    &__column {
+        width: 100%;
+        height: inherit;
+
+        display: flex;
+        align-items: center;
+
+        // Added based on AEG-25 however unable to replicate issue that caused this.
+        & a {
+            display: flex;
+            align-items: center;
+        }
+
+        &:last-child {
+            justify-content: flex-end;
+        }
+    }
+
+    &__logo {
+        height: 43px;
+        margin-right: 42px;
+
+        @include desktop {
+            margin-right: 80px;
+        }
+    }
+
+    &__login-form {
+        display: none;
+
+        @include tablet {
+            height: inherit;
+            display: flex;
+            align-items: center;
+            gap: 19px;
+        }
+    }
+
+    &__input {
+        height: 20px;
+        padding: 0 $padding-tablet-m;
+        border: none;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, .25);
+
+        @include tablet {
+            width: 118px;
+        }
+    }
+
+    &__button {
+        @include text-regular;
+        width: 64px;
+        max-height: 22px;
+        padding: 0;
+        margin-right: 14px;
+
+        &--mob {
+            @include tablet {
+                display: none;
+            }
+        }
+    }
+
+    &__hamburger-container {
+        @include tablet {
+            display: none;
+        }
+    }
+}

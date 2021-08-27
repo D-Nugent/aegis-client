@@ -1,5 +1,6 @@
 @use "./variables" as *;
 
+// Responsive Design
 @mixin mobile {
     @media (min-width: $screen-mobile) {
         @content;
@@ -16,4 +17,10 @@
     @media (min-width: $screen-desktop) {
         @content;
     };
+};
+
+// Reset Defaults
+@mixin link-reset {
+    color: $color-secondary;
+    text-decoration: none;
 };
