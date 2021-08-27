@@ -1,6 +1,6 @@
-import './ReportingItem.scss';
+import './HomeReportingItem.scss';
 
-export default function ReportingItem() {
+export default function HomeReportingItem() {
   return (
     <section className="reporting">
       <h2 className="reporting__title">Reporting a Lost Item? <span className="reporting__start">Start Here.</span></h2>

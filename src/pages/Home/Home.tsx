@@ -3,9 +3,9 @@ import { aboutURL, customerFaqURL } from '../../utilities/routerConfig';
 import './Home.scss';
 import '../../styles/globals.scss';
 import ReturnToTop from '../../components/ReturnToTop/ReturnToTop';
-import ContactUs from '../../components/ContactUs/ContactUs';
-import ReportingItem from '../../components/ReportingItem/ReportingItem';
-import ItemUpdateLookup from '../../components/ItemUpdateLookup/ItemUpdateLookup';
+import HomeContactUs from '../../components/HomeContactUs/HomeContactUs';
+import HomeReportingItem from '../../components/HomeReportingItem/HomeReportingItem';
+import HomeItemUpdate from '../../components/HomeItemUpdate/HomeItemUpdate';
 import DrawableSVG from '../../components/DrawableSVG/DrawableSVG';
 
 function Home() {
@@ -13,7 +13,7 @@ function Home() {
     <>
     <main className="home">
       <section className="user-prompts">
-        <ReportingItem/>
+        <HomeReportingItem/>
         <svg className="svg__top-curve--clip-path" viewBox="0 0 320 167">
           <defs>
             <clipPath id="svgPathTopCurve" clipPathUnits="objectBoundingBox">
@@ -25,7 +25,7 @@ function Home() {
           <path d="M320 1C170.104 6.51009 183.018 101.599 140.485 127.658C99.5164 152.757 53.3898 166.248 5.49582 166.745H320V1Z" fill="#143058"/>
           <path stroke="#143058" strokeWidth="0.250391" d="M5.49582 166.745C53.3898 166.248 99.5164 152.757 140.485 127.658C183.018 101.599 170.104 6.51009 320 1V166.745H5.49582ZM5.49582 166.745H0C1.8344 166.764 3.6664 166.764 5.49582 166.745Z"/>
         </svg>
-      <ItemUpdateLookup/>
+      <HomeItemUpdate/>
       </section>
       <div className="about-intro-wrapper">
         <section className="about-intro">
@@ -86,7 +86,7 @@ function Home() {
       </div>
       <section className="contact-us">
         <DrawableSVG type="phone"/>
-        <ContactUs/>
+        <HomeContactUs/>
       </section>
     </main>
     <ReturnToTop/>

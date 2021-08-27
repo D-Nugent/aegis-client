@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom';
 import { customerFaqURL } from '../../utilities/routerConfig';
-import './ContactUs.scss';
+import './HomeContactUs.scss';
 
-export default function ContactUs() {
+export default function HomeContactUs() {
   return (
-
         <div className="contact-us__wrapper">
           <div className="contact-us__summary">
             <h2 className="contact-us__title">Contact Us</h2>

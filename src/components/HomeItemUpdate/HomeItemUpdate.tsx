@@ -1,6 +1,6 @@
-import './ItemUpdateLookup.scss';
+import './HomeItemUpdate.scss';
 
-export default function ItemUpdateLookup() {
+export default function HomeItemUpdate() {
   return (
     <div className="update-wrapper">
       <section className="update">
