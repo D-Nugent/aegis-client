@@ -5,7 +5,6 @@
 $header-height-mob: 46px;
 $header-height-tab-desk: 54px;
 
-
 .header {
     position: fixed;
     top: 0;
@@ -41,6 +40,12 @@ $header-height-tab-desk: 54px;
 
         display: flex;
         align-items: center;
+
+        // Added based on AEG-25 however unable to replicate issue that caused this.
+        & a {
+            display: flex;
+            align-items: center;
+        }
 
         &:last-child {
             justify-content: flex-end;

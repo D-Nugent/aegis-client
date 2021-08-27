@@ -36,7 +36,7 @@ function Header() {
         });
     };
 
-    const handleShowModel = (): void => setShowMenu(!showMenu);
+    const handleShowModal = (): void => setShowMenu(!showMenu);
 
     return (
         <div>
@@ -61,7 +61,7 @@ function Header() {
                         </form>
                     }
                     <button className="button-primary header__button header__button--mob" type="button" onClick={handleLoginMob}>Login</button>
-                    <div className="header__hamburger-container" onClick={handleShowModel}>
+                    <div className="header__hamburger-container" onClick={handleShowModal}>
                         {!user &&
                             <img src={HamburgerIcon} alt="hamburger menu" />
                         }
