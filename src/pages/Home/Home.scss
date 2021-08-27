@@ -143,33 +143,6 @@
   }
 }
 
-.svg__lock{
-  display: none;
-  position: absolute;
-  width: 25vmax;
-  top: -8vmin;
-  right: 25vmax;
-
-  @include tablet{
-    display: block;
-  }
-
-  @include desktop{
-    width: 40vmin;
-    right: 20vmax;
-  }
-
-  &.--active path{
-    stroke-dashoffset: 0;
-  }
-  
-  &-path{
-    stroke-dasharray: 1490;
-    stroke-dashoffset: 1490;
-    transition: stroke-dashoffset 2s ease-in-out;
-  }
-}
-
 .about-intro-image{
   display: none;
   background-image: url('../../assets/images/business-man.jpeg');
@@ -201,35 +174,6 @@
     align-items: flex-end;
   }
 }
-
-.svg__question-mark{
-  display: none;
-  position: absolute;
-  width: 20vmax;
-  top: -8vmin;
-  left: 15vmax;
-
-  @include tablet{
-    display: block;
-  }
-
-  @include desktop{
-    width: 40vmin;
-    bottom: 20vmax;
-    left: 20vmax;
-  }
-
-  &.--active path{
-    stroke-dashoffset: 0;
-  }
-  
-  &-path{
-    stroke-dasharray: 956;
-    stroke-dashoffset: 956;
-    transition: stroke-dashoffset 2s ease-in-out;
-  }
-}
-
 
 .faq-intro{
   padding: 0 15%;
@@ -289,32 +233,4 @@
 
 .svg__faq--clip-path{
   width: 100%;
-}
-
-.svg__phone{
-  display: none;
-  position: absolute;
-  width: 35vmin;
-  top: -15vmin;
-  right: 25vmin;
-
-  @include tablet{
-    display: block;
-  }
-
-  @include desktop{
-    width: 45vmin;
-    bottom: 10vmax;
-    left: 35vmax;
-  }
-
-  &.--active path{
-    stroke-dashoffset: 0;
-  }
-
-  &-path{
-    stroke-dasharray: 2255;
-    stroke-dashoffset: 2255;
-    transition: stroke-dashoffset 2s ease-in-out;
-  }
 }

@@ -16,6 +16,7 @@
   transform: scale(0);
   opacity: 0;
   transition: opacity .3s ease-in, transform .4s cubic-bezier(0.42, 0, 0.18, 1.52);
+  z-index: 1;
   
   &:hover{
     box-shadow: rgba(0, 0, 0, .5);

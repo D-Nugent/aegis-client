@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import debounce from '../utilFunctions/debounce';
 
 interface scrollInterface {
   pageHeight: number;
@@ -8,21 +9,6 @@ interface scrollInterface {
 
 export const useScrollTrack = () => {
   const [scrollPos, setScrollPos] = useState<scrollInterface | null>(null)
-
-  function debounce(func: Function, wait:number = 20, immediate:boolean = true) {
-    let timeout: ReturnType<typeof setTimeout>|null;
-    return function() {
-      const context = this, args = arguments;
-      const later = function() {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
-      };
-      const callNow = immediate && !timeout;
-      if (timeout !== null) clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
-    };
-  }
 
   function scrollPosUpdate(){
     let pageHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight)
