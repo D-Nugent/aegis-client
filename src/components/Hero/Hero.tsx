@@ -9,7 +9,7 @@ type Props = {
 function Hero({ classes, children } : Props) {
 
     return (
-        <section className={classes}>
+        <section className={`hero${classes ? ` ${classes}` : ""}`}>
             { children }
             {/* <svg className="hero__svg-curve-clip-path" viewBox="0 0 320 167">
                 <defs>

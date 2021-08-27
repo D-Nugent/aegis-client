@@ -1,0 +1,11 @@
+@use "../../styles/mixins" as *;
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+
+    @include tablet {
+        min-height: 400px;
+    }
+}
