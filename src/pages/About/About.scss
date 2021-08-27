@@ -102,6 +102,27 @@
         font-weight: 400;
         margin-bottom: 16px;
     }
+
+    &__svg {
+        position: absolute;
+        // bottom value changed from 45px based on how content overlays it
+        bottom: 38px;
+        right: $lp-padding-mobile;
+        width: 142px;
+
+        @include tablet {
+            width: 287px;
+            top: 149px;
+            bottom: auto;
+            right: $lp-padding-tablet;
+        }
+
+        @include desktop {
+            width: 377px;
+            top: 221px;
+            right: $lp-padding-desktop;
+        }
+    }
 }
 
 .why {
