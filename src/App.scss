@@ -1,7 +1,7 @@
+@use "./styles/globals" as *;
 @use "./styles/fonts" as *;
 @use "./styles/variables" as *;
 @use "./styles/mixins" as *;
-
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -12,13 +12,4 @@
 html, body, textarea, button {
   color: $text-primary;
   font-family: 'Roboto', 'Raleway', 'Ubuntu', sans-serif;
-}
-
-html {
-  // @include text-regular;
-  background-color: #e5e5e5;
-
-  @include mobile {
-    width: 100%;
-  }
 }
