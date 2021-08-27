@@ -2,9 +2,6 @@
 @use "../../styles/variables" as *;
 @use "../../styles/fonts" as *;
 
-$header-height-mob: 46px;
-$header-height-tab-desk: 54px;
-
 .header {
     position: fixed;
     z-index: 1;

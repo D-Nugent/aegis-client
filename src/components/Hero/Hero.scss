@@ -1,6 +1,7 @@
 @use "../../styles/mixins" as *;
 
 .hero {
+    // Reconsider having  this as position relative by default
     position: relative;
     overflow: hidden;
     min-height: 500px;

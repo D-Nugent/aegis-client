@@ -53,7 +53,16 @@ $padding-desktop-s: .5rem;
 $padding-desktop-m: 1rem;
 $padding-desktop-l: 1.5rem;
 
+// Padding - Landing Pages
+$lp-padding-mobile: 48px;
+$lp-padding-tablet: 66px;
+$lp-padding-desktop: 183px; 
+
 // Borders
 $border-width-default: 0.125rem;
 $border-radius-default: 0;
 $border-radius-secondary: 100%;
+
+// Header Sizing
+$header-height-mob: 46px;
+$header-height-tab-desk: 54px;
