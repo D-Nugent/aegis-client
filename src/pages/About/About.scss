@@ -176,14 +176,11 @@
 
     &__icon-wrapper {
         width: 100%;
+        margin-top: 30px;
         display: flex;
         gap: 25px;
         justify-content: space-between;
         align-items: center;
-
-        @include tablet {
-            margin-top: 30px;
-        }
 
         & div {
             width: 50px;
