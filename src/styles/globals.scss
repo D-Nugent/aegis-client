@@ -1,4 +1,5 @@
 @use "./mixins" as *;
+@use "./fonts" as *;
 @use "./variables" as *;
 
 .button {
@@ -49,3 +50,43 @@
         // background-color: $color-secondary;
     }
 }
+
+.search-bar{
+    width: 100%;
+    max-width: 224px;
+    height: 20px;
+    display: flex;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, .25);
+    
+    @include desktop{
+      max-width: 240px;
+    }
+  
+    & input {
+      @include heading-quaternary;
+      height: 100%;
+      width: 100%;
+      border: 0;
+      background-color: $color-field;
+      outline: 0;
+      padding: 2% 4%;
+  
+      &:focus{
+        border-bottom: 1px solid $color-emph-primary;
+        box-shadow: 0 -2px 2px inset rgba(0, 0, 0, .25);
+      }
+    }
+  
+    & button {
+      height: 20px;
+      min-width: 20px;
+      background-color: $color-emph-primary;
+      border: 0;
+      color: $color-field;
+  
+      &:hover{
+        cursor: pointer;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
+      }
+    }
+  }

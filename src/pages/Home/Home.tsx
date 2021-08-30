@@ -66,7 +66,7 @@ function Home() {
           </svg>
         </aside>
         <DrawableSVG type="question-mark"/>
-        <section className="faq-intro">
+        <section className="faq-intro" id="faq-intro">
           <h2 className="faq-intro__title">FAQ's</h2>
           <div className="faq-intro__summary">
             <p className="faq-intro__msg">

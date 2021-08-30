@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-import { customerFaqURL } from '../../utilities/routerConfig';
 import './HomeContactUs.scss';
 
 export default function HomeContactUs() {
@@ -8,7 +6,7 @@ export default function HomeContactUs() {
           <div className="contact-us__summary">
             <h2 className="contact-us__title">Contact Us</h2>
             <p className="contact-us__msg">
-              Still have some questions that our <Link to={customerFaqURL} className="contact-us__faq-link">FAQ's</Link> didn't answer?
+              Still have some questions that our <a href="#faq-intro" className="contact-us__faq-link">FAQ's</a> didn't answer?
               Or are you just wanting to talk? either way submit your query below and we will respond within two business days.
             </p>
             <p className="contact-us__msg --expanded">
