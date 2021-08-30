@@ -33,7 +33,7 @@ function Home() {
           <div className="about-intro__summary">
             <p className="about-intro__msg">
               A secure platform for reporting, logging and tracking lost and found items. By enhancing
-              the communication process the interface eases the process for clients and users alike. 
+              the communication process the interface eases the process for clients and hotel guests alike. 
             </p>
             <Link to={aboutURL} className="about-intro__more">
               Learn More
@@ -71,14 +71,14 @@ function Home() {
           <div className="faq-intro__summary">
             <p className="faq-intro__msg">
               We all have questions from time-to-time. Not a problem! We're here to help. So that we can
-              best assist you, are you a client or a user? 
+              best assist you, are you a client or a hotel guest? 
             </p>
             <div className="faq-intro__link-wrapper">
               <Link to={customerFaqURL} className="faq-intro__link button--primary">
                 Client
               </Link>
               <Link to={customerFaqURL} className="faq-intro__link button--secondary">
-                User
+                Guest
               </Link>
             </div>
           </div>

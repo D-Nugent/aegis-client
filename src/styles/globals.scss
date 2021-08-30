@@ -9,7 +9,7 @@
     margin: 4px;
     border: 0;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, .25);
-    transform: translate(-4px, 4px);
+    transform: translate(0, 0);
     transition: transform .3s ease-in;
     text-decoration: none;
     display: flex;
@@ -29,25 +29,25 @@
 
     &--active {
         box-shadow: none;
-        transform: translate(0, 0);
+        transform: translate(4px, 4px);
     }
 
     &--primary {
         @extend .button;
         color: $color-field;
-        background-color: $color-emph-primary;
+        background-color: $color-emphasis-primary;
     }
 
     &--secondary {
         @extend .button;
-        color: $color-emph-primary;
+        color: $color-emphasis-primary;
         background-color: $color-field;
     }
 
     &--tertiary {
         @extend .button;
-        // color: $color-field;
-        // background-color: $color-secondary;
+        color: $color-field;
+        background-color: $color-secondary;
     }
 }
 
@@ -72,7 +72,7 @@
       padding: 2% 4%;
   
       &:focus{
-        border-bottom: 1px solid $color-emph-primary;
+        border-bottom: 1px solid $color-emphasis-primary;
         box-shadow: 0 -2px 2px inset rgba(0, 0, 0, .25);
       }
     }
@@ -80,7 +80,7 @@
     & button {
       height: 20px;
       min-width: 20px;
-      background-color: $color-emph-primary;
+      background-color: $color-emphasis-primary;
       border: 0;
       color: $color-field;
   

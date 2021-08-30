@@ -33,10 +33,12 @@
 .location{
   &__title{
     @include heading-quaternary;
-    color: $color-emph-primary;
+    color: $color-emphasis-primary;
+    
   }
 
   &__search-wrapper{
+    margin-top: $margin-mobile-s;
     margin-bottom: $margin-mobile-m;
   }
   
