@@ -3,9 +3,10 @@
 
 
 *, *::before, *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
   padding: 0;
   margin: 0;
+  scroll-behavior: inherit;
 }
 
 html, body, textarea, button {
@@ -14,5 +15,22 @@ html, body, textarea, button {
 }
 
 html {
-  @include text-regular;
+  box-sizing: border-box;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+body, #root {
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, label {
+  user-select: none;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
 }

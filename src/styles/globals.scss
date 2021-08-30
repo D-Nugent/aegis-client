@@ -1,42 +1,92 @@
 @use "./mixins" as *;
+@use "./fonts" as *;
 @use "./variables" as *;
 
 .button {
     width: 100%;
     height: 34px;
     padding: 8px 24px;
-    box-shadow: 4px 4px 8px regb(0, 0, 0, .25);
+    margin: 4px;
+    border: 0;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, .25);
     transform: translate(-4px, 4px);
     transition: transform .3s ease-in;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 106px;
+    z-index: 1;
 
     @include tablet {
-        width: 128px;
+        max-width: 128px;
     }
 
     &:hover {
-        box-shadow: 4px 4px 8px regb(0, 0, 0, .5);
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
+        cursor: pointer;
     }
 
-    &:active {
+    &--active {
         box-shadow: none;
         transform: translate(0, 0);
     }
 
-    &-primary {
+    &--primary {
         @extend .button;
-        // color: $color-field;
-        // background-color: $color-emphasis-primary;
+        color: $color-field;
+        background-color: $color-emph-primary;
     }
 
-    &-secondary {
+    &--secondary {
         @extend .button;
-        // color: $color-emphasis-primary;
-        // background-color: $color-field;
+        color: $color-emph-primary;
+        background-color: $color-field;
     }
 
-    &-tertiary {
+    &--tertiary {
         @extend .button;
         // color: $color-field;
         // background-color: $color-secondary;
     }
 }
+
+.search-bar{
+    width: 100%;
+    max-width: 224px;
+    height: 20px;
+    display: flex;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, .25);
+    
+    @include desktop{
+      max-width: 240px;
+    }
+  
+    & input {
+      @include heading-quaternary;
+      height: 100%;
+      width: 100%;
+      border: 0;
+      background-color: $color-field;
+      outline: 0;
+      padding: 2% 4%;
+  
+      &:focus{
+        border-bottom: 1px solid $color-emph-primary;
+        box-shadow: 0 -2px 2px inset rgba(0, 0, 0, .25);
+      }
+    }
+  
+    & button {
+      height: 20px;
+      min-width: 20px;
+      background-color: $color-emph-primary;
+      border: 0;
+      color: $color-field;
+  
+      &:hover{
+        cursor: pointer;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
+      }
+    }
+  }
