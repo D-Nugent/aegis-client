@@ -1,33 +1,75 @@
-import { NavLink } from 'react-router-dom';
-import { aboutURL, contactUsURL, dashboardURL, homeURL, loginRegisterURL, patronPortalURL } from '../../utilities/routerConfig';
+import './Header.scss';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import AegisLogo from '../../assets/logo/aegis-logo.svg';
+import HeaderNav from '../HeaderNav/HeaderNav';
+import HamburgerIcon from '../../assets/icons/hamburger-menu.svg';
+import { homeURL } from '../../utilities/routerConfig';
 
 function Header() {
+    
+    // TEMP STATE - to be deleted
+    const [ user, setUser ] = useState(false);
+    // 
+
+    const [ showMenu, setShowMenu ] = useState(true);
+    const [ loginData, setLoginData ] = useState({ username : "", password : ""});
+
+    const handleLoginMob = (): void => console.log("Logged In");
+
+    const handleLogin = (e: React.SyntheticEvent): void => {
+        e.preventDefault();
+        const { username, password } = loginData;
+        if (!loginData.username || !loginData.password) return console.log("insufficient login data supplied");
+
+        console.log(username, password);
+
+        // Temp
+        setUser(true);
+        // 
+    };
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+        setLoginData({
+            ...loginData,
+            [e.target.name] : e.target.value
+        });
+    };
+
+    const handleShowModal = (): void => setShowMenu(!showMenu);
+
     return (
-        <header>
-            <nav>
-                <ul style={{display: 'flex', listStyle: "none"}}>
-                    <li style={{padding: "1rem"}}>
-                        <NavLink to={homeURL}>Home</NavLink>
-                    </li>
-                    <li style={{padding: "1rem"}}>
-                        <NavLink to={aboutURL}>About</NavLink>
-                    </li>
-                    <li style={{padding: "1rem"}}>
-                        <NavLink to={contactUsURL}>Contact Us</NavLink>
-                    </li>
-                    <li style={{padding: "1rem"}}>
-                        <NavLink to={dashboardURL}>Dashboard</NavLink>
-                    </li>
-                    <li style={{padding: "1rem"}}>
-                        <NavLink to={loginRegisterURL}>Log in or Register</NavLink>
-                    </li>
-                    <li style={{padding: "1rem"}}>
-                        <NavLink to={patronPortalURL}>Patron Portal</NavLink>
-                    </li>
-                </ul>
-            </nav>
-            
-        </header>
+        <div>
+            <div className="header__spacer"></div>
+            <header className="header">
+                <div className="header__column">
+                    <Link to={homeURL}>
+                        <img className="header__logo" src={AegisLogo} alt="logo" />
+                    </Link>
+                    <HeaderNav />
+                </div>
+                <div className="header__column">
+                    {!user && 
+                        <form className="header__login-form" onSubmit={e => handleLogin(e)}>
+                            <label htmlFor="username">
+                                <input className="header__input" type="text" name="username" value={loginData.username} placeholder="Username" onChange={handleChange} />
+                            </label>
+                            <label htmlFor="password">
+                                <input className="header__input" type="text" name="password" value={loginData.password} placeholder="Password" onChange={handleChange} />
+                            </label>
+                            <button className="button--primary header__button" type="submit" >Login</button>
+                        </form>
+                    }
+                    <button className="button--primary header__button header__button--mob" type="button" onClick={handleLoginMob}>Login</button>
+                    <div className="header__hamburger-container" onClick={handleShowModal}>
+                        {!user &&
+                            <img src={HamburgerIcon} alt="hamburger menu" />
+                        }
+                    </div>
+                </div>            
+            </header>
+        </div>
+        
     );
 }
 
