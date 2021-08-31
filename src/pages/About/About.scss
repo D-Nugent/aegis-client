@@ -8,12 +8,13 @@
         padding-left: $lp-padding-mobile;
         padding-right: $lp-padding-mobile;
         height: calc(100vh - #{$header-height-mob});
-        min-height: 500px;
+        min-height: $min-screen-height-mob;
 
         @include tablet {
             padding-left: $lp-padding-tablet;
             padding-right: $lp-padding-tablet;
             height: calc(100vh - #{$header-height-tab-desk});
+            min-height: 500px;
         }
 
         @include desktop {
@@ -24,7 +25,9 @@
 }
 
 .purpose {
+    position: relative;
     padding-top: 97px;
+    background: rgba(0, 0, 0, 0);
 
     @include tablet {
         padding-top: 53px;
@@ -106,22 +109,18 @@
 
     &__svg {
         position: absolute;
-        // bottom value changed from 45px based on how content overlays it
-        bottom: 38px;
-        right: $lp-padding-mobile;
+        z-index: 1;
         width: 142px;
 
         @include tablet {
             width: 287px;
             top: 149px;
-            bottom: auto;
-            right: $lp-padding-tablet;
+            right: 0;
         }
 
         @include desktop {
             width: 377px;
             top: 221px;
-            right: $lp-padding-desktop;
         }
     }
 }
