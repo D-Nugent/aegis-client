@@ -47,28 +47,22 @@ function About() {
                     </div>
                 </div>
             </section>
+            <section className="team">
+                <div className="team__wrapper">
+                    <div className="team__column">
+                        <h2 className="team__heading-secondary">The Team Behind It All</h2>
+                        <p className="team__text">Lorem Ipsum Text here. A secure platform for reporting, logging and tracking lost and found items. Intended to ease the process for clients and users alike.</p>
+                        <p className="team__text">Lorem Ipsum Text here. A secure platform for reporting, logging and tracking lost and found items. Intended to ease the process for clients and users alike.</p>
+                    </div>
+                    <div className="team__column">
+                        <div className="team__canvas">
+                            <img src={AboutTeamImg} alt="meet the team" />
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
     )
-
-    // return (
-    //     <main className="about">
-            
-    //         <section className="team">
-    //             <div className="team__wrapper">
-    //                 <div className="team__column">
-    //                     <h2 className="team__heading-secondary">The Team Behind It All</h2>
-    //                     <p className="team__text">Lorem Ipsum Text here. A secure platform for reporting, logging and tracking lost and found items. Intended to ease the process for clients and users alike.</p>
-    //                     <p className="team__text">Lorem Ipsum Text here. A secure platform for reporting, logging and tracking lost and found items. Intended to ease the process for clients and users alike.</p>
-    //                 </div>
-    //                 <div className="team__column">
-    //                     <div className="team__canvas">
-    //                         <img src={AboutTeamImg} alt="meet the team" />
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         </section>
-    //     </main>
-    // );
 
 }
 

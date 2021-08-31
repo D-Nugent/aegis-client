@@ -127,7 +127,7 @@
 }
 
 .why {
-    background-color: $color-secondary;
+    background-color: $color-primary;
     padding-top: 20px;
 
     @include tablet {
@@ -213,7 +213,7 @@
 
 .team {
     padding-top: 97px;
-    background-color: $color-secondary;
+    background-color: $color-primary;
 
     &__heading-secondary {
         @extend .purpose__heading-secondary;
