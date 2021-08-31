@@ -1,12 +1,29 @@
 @use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
 
 .hero {
-    // Reconsider having  this as position relative by default
     position: relative;
-    overflow: hidden;
+    width: 100%;
+    @include page-height-headerless;
     min-height: 500px;
+
+    background: $color-offset-secondary;
 
     @include tablet {
         min-height: 400px;
+    }
+}
+
+.svg-hero {
+
+    &__curve {
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+
+        @include tablet {
+            height: 100%;
+        }
     }
 }
