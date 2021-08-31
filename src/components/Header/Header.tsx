@@ -52,15 +52,15 @@ function Header() {
                     {!user && 
                         <form className="header__login-form" onSubmit={e => handleLogin(e)}>
                             <label htmlFor="username">
-                                <input className="header__input" type="text" name="username" value={loginData.username} placeholder="username..." onChange={handleChange} />
+                                <input className="header__input" type="text" name="username" value={loginData.username} placeholder="Username" onChange={handleChange} />
                             </label>
                             <label htmlFor="password">
-                                <input className="header__input" type="text" name="password" value={loginData.password} placeholder="password..." onChange={handleChange} />
+                                <input className="header__input" type="text" name="password" value={loginData.password} placeholder="Password" onChange={handleChange} />
                             </label>
-                            <button className="button-primary header__button" type="submit" >Login</button>
+                            <button className="button--primary header__button" type="submit" >Login</button>
                         </form>
                     }
-                    <button className="button-primary header__button header__button--mob" type="button" onClick={handleLoginMob}>Login</button>
+                    <button className="button--primary header__button header__button--mob" type="button" onClick={handleLoginMob}>Login</button>
                     <div className="header__hamburger-container" onClick={handleShowModal}>
                         {!user &&
                             <img src={HamburgerIcon} alt="hamburger menu" />

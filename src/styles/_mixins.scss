@@ -19,6 +19,266 @@
     };
 };
 
+/**
+ * Returns a responsive/adaptive margin
+ * 
+ * @remarks
+ * Mixin is dependent on variables for breakpoints and margin values. Mixin is dependent on mixins for breakpoint
+ media queries. If sizing needs to be changed, variables should be adjusted rather than this mixin.
+ * 
+ * @example
+ * Example one:
+ * ```
+ * responsiveMargin(m,bottom,left);
+ * // returns:
+ * // At mobile: margin-bottom: .1rem; margin-left: 1rem;
+ * // At tablet: margin-bottom: 1.5rem; margin-left: 1.5rem;
+ * // At desktop: margin-bottom: 1.5rem; margin-left: 1.5rem;
+ * ```
+ * Example two:
+ * ```
+ * responsiveMargin();
+ * // returns:
+ * // at mobile: margin: .75rem;
+ * // at tablet: margin: 1rem;
+ * // at desktop: margin: 1rem;
+ * ```
+ * @param size :string - a single letter of s, m or l representing the size of the margin to be created
+ * @param directions :[]string | null - representing attributes for the margin css style ('top','right','bottom'
+  and/or 'left'). As few or as many values may be provided to add or omit styling. Null will apply 's' in all directions.
+ * @returns an svg element which draws (and undraws) itself on scroll
+ */
+
+@mixin responsiveMargin($size: s,$directions...) {
+    @if $size == 's' {
+        @if length($directions) != 0 {
+            @for $i from 0 to length($directions) {
+                margin-#{nth($directions, $i + 1)}: $margin-mobile-s; 
+            }
+        } @else {
+            margin: $margin-mobile-s;
+        }
+        @include tablet {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $margin-tablet-s; 
+                }
+            } @else {
+                margin: $margin-tablet-s;
+            }
+        }
+        @include desktop {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $margin-desktop-s; 
+                }
+            } @else {
+                margin: $margin-desktop-s;
+            }
+        }
+    };
+
+    @if $size == 'm' {
+        @if length($directions) != 0 {
+            @for $i from 0 to length($directions) {
+                margin-#{nth($directions, $i + 1)}: $margin-mobile-m; 
+            }
+        } @else {
+            margin: $margin-mobile-m;
+        }
+        @include tablet {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $margin-tablet-m; 
+                }
+            } @else {
+                margin: $margin-tablet-m;
+            }
+        }
+        @include desktop {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $margin-desktop-m; 
+                }
+            } @else {
+                margin: $margin-desktop-m;
+            }
+        }
+    };
+
+    @if $size == 'l' {
+        @if length($directions) != 0 {
+            @for $i from 0 to length($directions) {
+                margin-#{nth($directions, $i + 1)}: $margin-mobile-l; 
+            }
+        } @else {
+            margin: $margin-mobile-l;
+        }
+        @include tablet {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $margin-tablet-l; 
+                }
+            } @else {
+                margin: $margin-tablet-l;
+            }
+        }
+        @include desktop {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $margin-desktop-l; 
+                }
+            } @else {
+                margin: $margin-desktop-l;
+            }
+        }
+    }
+}
+
+// Padding Mixins
+
+/**
+ * Returns a responsive/adaptive padding
+ * 
+ * @remarks
+ * Mixin is dependent on variables for breakpoints and padding values. Mixin is dependent on mixins for breakpoint
+ media queries. If sizing needs to be changed, variables should be adjusted rather than this mixin.
+ * 
+ * @example
+ * Example one:
+ * ```
+ * responsivePadding(m,bottom,left);
+ * // returns:
+ * // At mobile: padding-bottom: .5rem; padding-left: .5rem;
+ * // At tablet: padding-bottom: 1rem; padding-left: 1rem;
+ * // At desktop: padding-bottom: 1rem; padding-left: 1rem;
+ * ```
+ * Example two:
+ * ```
+ * responsivePadding();
+ * // returns:
+ * // at mobile: padding: .25rem;
+ * // at tablet: padding: .5rem;
+ * // at desktop: padding: .5rem;
+ * ```
+ * @param size :string - a single letter of xs,s, m or l representing the size of the padding to be created
+ * @param directions :[]string | null - representing attributes for the padding css style ('top','right','bottom'
+  and/or 'left'). As few or as many values may be provided to add or omit styling. Null will apply 's' in all directions.
+ * @returns an svg element which draws (and undraws) itself on scroll
+ */
+@mixin responsivePadding($size: s,$directions...) {
+    @if $size == 'xs' {
+        @if length($directions) != 0 {
+            @for $i from 0 to length($directions) {
+                margin-#{nth($directions, $i + 1)}: $padding-mobile-xs; 
+            }
+        } @else {
+            margin: $padding-mobile-xs;
+        }
+        @include tablet {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $padding-tablet-xs; 
+                }
+            } @else {
+                margin: $padding-tablet-xs;
+            }
+        }
+        @include desktop {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $padding-desktop-xs; 
+                }
+            } @else {
+                margin: $padding-desktop-xs;
+            }
+        }
+    };
+
+    @if $size == 's' {
+        @if length($directions) != 0 {
+            @for $i from 0 to length($directions) {
+                margin-#{nth($directions, $i + 1)}: $padding-mobile-s; 
+            }
+        } @else {
+            margin: $padding-mobile-s;
+        }
+        @include tablet {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $padding-tablet-s; 
+                }
+            } @else {
+                margin: $padding-tablet-s;
+            }
+        }
+        @include desktop {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $padding-desktop-s; 
+                }
+            } @else {
+                margin: $padding-desktop-s;
+            }
+        }
+    };
+
+    @if $size == 'm' {
+        @if length($directions) != 0 {
+            @for $i from 0 to length($directions) {
+                margin-#{nth($directions, $i + 1)}: $padding-mobile-m; 
+            }
+        } @else {
+            margin: $padding-mobile-m;
+        }
+        @include tablet {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $padding-tablet-m; 
+                }
+            } @else {
+                margin: $padding-tablet-m;
+            }
+        }
+        @include desktop {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $padding-desktop-m; 
+                }
+            } @else {
+                margin: $padding-desktop-m;
+            }
+        }
+    };
+
+    @if $size == 'l' {
+        @if length($directions) != 0 {
+            @for $i from 0 to length($directions) {
+                margin-#{nth($directions, $i + 1)}: $padding-mobile-l; 
+            }
+        } @else {
+            margin: $padding-mobile-l;
+        }
+        @include tablet {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $padding-tablet-l; 
+                }
+            } @else {
+                margin: $padding-tablet-l;
+            }
+        }
+        @include desktop {
+            @if length($directions) != 0 {
+                @for $i from 0 to length($directions) {
+                    margin-#{nth($directions, $i + 1)}: $padding-desktop-l; 
+                }
+            } @else {
+                margin: $padding-desktop-l;
+            }
+        }
+    }
+}
 // Reset Defaults
 @mixin link-reset {
     color: $color-secondary;

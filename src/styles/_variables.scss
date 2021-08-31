@@ -3,9 +3,12 @@ $color-primary: #143058;
 $color-secondary: #0f2544;
 $color-tertiary: #435979;
 $color-quarternary: #d0d6de;
+
 $color-offset-primary: #eeebe8;
+
 $color-offset-secondary: #f9f8f7;
 $color-field: #fcfcfb;
+
 $color-emphasis-primary: #fe5c32;
 $color-emphasis-secondary: #fba919;
 $color-emphasis-tertiary: #fccd7a;
@@ -18,21 +21,19 @@ $text-emphasis: $color-emphasis-primary;
 // Resp Design
 $screen-mobile: 280px;
 $screen-tablet: 768px;
-// tablet vertical and horizontal?
 $screen-desktop: 1280px;
 
 // Margins
-$margin-mobile-xs: .5rem;
+$margin-xs: .5rem;
+
 $margin-mobile-s: .75rem;
 $margin-mobile-m: 1rem;
 $margin-mobile-l: 1.5rem;
 
-$margin-tablet-xs: .5rem;
 $margin-tablet-s: 1rem;
 $margin-tablet-m: 1.5rem;
 $margin-tablet-l: 2rem;
 
-$margin-desktop-xs: .5rem;
 $margin-desktop-s: 1rem;
 $margin-desktop-m: 1.5rem;
 $margin-desktop-l: 3rem;

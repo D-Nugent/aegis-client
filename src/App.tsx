@@ -19,10 +19,9 @@ import PatronPortalPage from './pages/PatronPortal/PatronPortal';
 function App() {
 
   return (
-    <div className="App">
+    <div className="app">
       <BrowserRouter>
         <Header />
-
         <Switch>
           <Route exact path={homeURL} component={HomePage} />
           <Route path={aboutURL} component={AboutPage} />
