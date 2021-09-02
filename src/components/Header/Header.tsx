@@ -15,7 +15,11 @@ function Header() {
     const [ showMenu, setShowMenu ] = useState(true);
     const [ loginData, setLoginData ] = useState({ username : "", password : ""});
 
-    const handleLoginMob = (): void => console.log("Logged In");
+    const handleLoginMob = (): void => {
+        // TEMP
+        setUser(true);
+        // 
+    };
 
     const handleLogin = (e: React.SyntheticEvent): void => {
         e.preventDefault();
@@ -60,11 +64,11 @@ function Header() {
                             <button className="button--primary header__button" type="submit" >Login</button>
                         </form>
                     }
-                    <button className="button--primary header__button header__button--mob" type="button" onClick={handleLoginMob}>Login</button>
+                    {!user &&
+                        <button className="button--primary header__button header__button--mob" type="button" onClick={handleLoginMob}>Login</button>
+                    }
                     <div className="header__hamburger-container" onClick={handleShowModal}>
-                        {!user &&
-                            <img src={HamburgerIcon} alt="hamburger menu" />
-                        }
+                        <img src={HamburgerIcon} alt="hamburger menu" />
                     </div>
                 </div>            
             </header>
