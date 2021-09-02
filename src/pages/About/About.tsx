@@ -1,5 +1,6 @@
 import './About.scss';
 import Hero from '../../components/Hero/Hero';
+import ReturnToTop from '../../components/ReturnToTop/ReturnToTop';
 import AegisScreenshot from '../../assets/images/aegis-screenshot.png';
 import FastIcon from '../../assets/icons/about-fast.svg';
 import SecureIcon from '../../assets/icons/about-secure.svg';
@@ -11,6 +12,7 @@ function About() {
     const screenShotsArr = [];
 
     return(
+        <>
         <main className="about">
             <Hero classes="purpose">
                 <h1 className="purpose__heading">About Aegis</h1>
@@ -65,6 +67,8 @@ function About() {
                 </div>
             </section>
         </main>
+        <ReturnToTop />
+        </>
     )
 
 }
