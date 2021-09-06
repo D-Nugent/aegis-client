@@ -1,5 +1,21 @@
+@use '../../styles/fonts' as *;
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
 .side-menu {
   height: 100%;
   width: 20%;
-  background-color: black;
+  display: flex;
+
+  &__navigation {
+    height: 100%;
+    width: 54px;
+    background-color: $color-primary;
+  }
+
+  &__page-options{
+    height: 100%;
+    width: 24px;
+    background-color: $color-offset-primary;
+  }
 }
