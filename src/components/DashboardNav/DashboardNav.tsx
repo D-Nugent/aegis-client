@@ -15,15 +15,15 @@ import './DashboardNav.scss';
 
 function DashboardNav() {
   return (
-    <aside className="dashboard-nav">
-      <nav className="dashboard-nav__navigation">
+    <aside className="side-nav">
+      <nav className="dashboard-nav">
         <ul>
           <li>
             <NavLink to={reportsURL}>
               <SVGLogoInverse/>
             </NavLink>
           </li>
-          <li>
+          <li className="dashboard-nav__list --add-item">
             <NavLink className="dashboard-nav__link" activeClassName="dashboard-nav__link --active" to={foundItemURL}>
               <SVGAddItem/>
             </NavLink>
@@ -53,6 +53,8 @@ function DashboardNav() {
               <SVGReports/>
             </NavLink>
           </li>
+        </ul>
+        <ul>
           <li>
             <NavLink className="dashboard-nav__link" activeClassName="dashboard-nav__link --active" to={customerFaqURL}>
               <SVGHelp/>
@@ -78,8 +80,49 @@ function DashboardNav() {
             <Route path={reportsURL} component={undefined} />
         </Switch>
       </nav>
-      <div className="dashboard-nav__page-options">
-        
+      <div className="page-options">
+        <section className="page-options__wrapper">
+          <div className="page-options__header">
+            <h2 className="page-options__header-title">
+              Add Item
+            </h2>
+            <div className="page-options__header-logo">
+              <SVGAddItem/>
+            </div>
+          </div>
+          <ul className="page-options__links">
+            <li>
+              <NavLink to='/dashboard' className="page-options__link" activeClassName="page-options__link --active">
+                Add Lost Item Query
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to='placeholder' className="page-options__link" activeClassName="page-options__link --active">
+                Add Found Item Query
+              </NavLink>
+            </li>
+          </ul>
+          <div className="page-options__section">
+            <h3 className="page-options__section-title">
+              Quick Add Templates
+            </h3>
+          </div>
+          <div className="page-options__section">
+            <h3 className="page-options__section-title">
+              Batch Actions
+            </h3>
+            
+          </div>
+          <div className="page-options__section">
+            <h3 className="page-options__section-title">
+              Recently Added
+            </h3>
+            
+          </div>
+        </section>
+        <div className="page-options__expand">
+          {'>'}
+        </div>
       </div>
     </aside>
   );
