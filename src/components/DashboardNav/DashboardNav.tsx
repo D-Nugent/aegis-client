@@ -15,8 +15,8 @@ import './DashboardNav.scss';
 
 function DashboardNav() {
   return (
-    <aside className="side-menu">
-      <nav className="side-menu__navigation">
+    <aside className="dashboard-nav">
+      <nav className="dashboard-nav__navigation">
         <ul>
           <li>
             <NavLink to={reportsURL}>
@@ -24,52 +24,52 @@ function DashboardNav() {
             </NavLink>
           </li>
           <li>
-            <NavLink to={foundItemURL}>
+            <NavLink className="dashboard-nav__link" activeClassName="dashboard-nav__link --active" to={foundItemURL}>
               <SVGAddItem/>
             </NavLink>
           </li>
           <li>
-            <NavLink to={searchItemsURL}>
+            <NavLink className="dashboard-nav__link" activeClassName="dashboard-nav__link --active" to={searchItemsURL}>
               <SVGSearchLost/>
             </ NavLink>
           </li>
           <li>
-            <NavLink to={profileURL}>
+            <NavLink className="dashboard-nav__link" activeClassName="dashboard-nav__link --active" to={profileURL}>
               <SVGSearchFound/>
             </NavLink>
           </li>
           <li>
-            <NavLink to={editProfileURL}>
+            <NavLink className="dashboard-nav__link" activeClassName="dashboard-nav__link --active" to={editProfileURL}>
               <SVGCompare/>
             </NavLink>
           </li>
           <li>
-            <NavLink to={customerFaqURL}>
+            <NavLink className="dashboard-nav__link" activeClassName="dashboard-nav__link --active" to={customerFaqURL}>
               <SVGItemMatches/>
             </NavLink>
           </li>
           <li>
-            <NavLink to={customerFaqURL}>
+            <NavLink className="dashboard-nav__link" activeClassName="dashboard-nav__link --active" to={customerFaqURL}>
               <SVGReports/>
             </NavLink>
           </li>
           <li>
-            <NavLink to={customerFaqURL}>
+            <NavLink className="dashboard-nav__link" activeClassName="dashboard-nav__link --active" to={customerFaqURL}>
               <SVGHelp/>
             </NavLink>
           </li>
           <li>
-            <NavLink to={customerFaqURL}>
+            <NavLink className="dashboard-nav__link" activeClassName="dashboard-nav__link --active" to={customerFaqURL}>
               <SVGSettings/>
             </NavLink>
           </li>
           <li>
-            <NavLink to={customerFaqURL}>
+            <NavLink className="dashboard-nav__link" activeClassName="dashboard-nav__link --active" to={customerFaqURL}>
               <SVGMessages/>
             </NavLink>
           </li>
           <li>
-            <NavLink to={customerFaqURL}>
+            <NavLink className="dashboard-nav__link" activeClassName="dashboard-nav__link --active" to={customerFaqURL}>
               <SVGProfile/>
             </NavLink>
           </li>
@@ -78,7 +78,7 @@ function DashboardNav() {
             <Route path={reportsURL} component={undefined} />
         </Switch>
       </nav>
-      <div className="side-menu__page-options">
+      <div className="dashboard-nav__page-options">
         
       </div>
     </aside>
