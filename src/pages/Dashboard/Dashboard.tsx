@@ -1,12 +1,12 @@
-import React from 'react';
 import DashboardNav from '../../components/DashboardNav/DashboardNav';
+import './Dashboard.scss';
 
 function Dashboard() {
     return (
-        <div>
+        <section className="dashboard">
             
             <DashboardNav />
-        </div>
+        </section>
     );
 }
 
