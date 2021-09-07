@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Switch, Route, NavLink } from 'react-router-dom';
 import SVGAddItem from '../../assets/icons/SVGAddItem';
 import SVGCompare from '../../assets/icons/SVGCompare';
@@ -14,6 +15,13 @@ import { customerFaqURL, editProfileURL, foundItemURL, profileURL, reportsURL, s
 import './DashboardNav.scss';
 
 function DashboardNav() {
+  const [pageOptionsVisible, setPageOptionsVisible] = useState(false)
+
+
+  function togglePageOptionsVisibility(){
+    setPageOptionsVisible(!pageOptionsVisible);
+  }
+  
   return (
     <aside className="side-nav">
       <nav className="dashboard-nav">
@@ -80,8 +88,8 @@ function DashboardNav() {
             <Route path={reportsURL} component={undefined} />
         </Switch>
       </nav>
-      <div className="page-options">
-        <section className="page-options__wrapper">
+      <div className={`${pageOptionsVisible?'page-options --active':'page-options'}`}>
+        <section className={`${pageOptionsVisible?'page-options__wrapper --active':'page-options__wrapper'}`}>
           <div className="page-options__header">
             <h2 className="page-options__header-title">
               Add Item
@@ -117,11 +125,10 @@ function DashboardNav() {
             <h3 className="page-options__section-title">
               Recently Added
             </h3>
-            
           </div>
         </section>
-        <div className="page-options__expand">
-          {'>'}
+        <div className="page-options__expand" onClick={togglePageOptionsVisibility}>
+          {pageOptionsVisible?'<':'>'}
         </div>
       </div>
     </aside>
