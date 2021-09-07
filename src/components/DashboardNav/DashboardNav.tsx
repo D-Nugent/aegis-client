@@ -1,12 +1,17 @@
 import { useState } from 'react';
 import { Switch, Route, NavLink } from 'react-router-dom';
 import SVGAddItem from '../../assets/icons/SVGAddItem';
+import SVGAddTemplate from '../../assets/icons/SVGAddTemplate';
+import SVGBatch from '../../assets/icons/SVGBatch';
 import SVGCompare from '../../assets/icons/SVGCompare';
+import SVGExpand from '../../assets/icons/SVGExpand';
 import SVGHelp from '../../assets/icons/SVGHelp';
 import SVGItemMatches from '../../assets/icons/SVGItemMatches';
 import SVGLogoInverse from '../../assets/icons/SVGLogoInverse';
 import SVGMessages from '../../assets/icons/SVGMessages';
 import SVGProfile from '../../assets/icons/SVGProfile';
+import SVGQuickAdd from '../../assets/icons/SVGQuickAdd';
+import SVGRecent from '../../assets/icons/SVGRecent';
 import SVGReports from '../../assets/icons/SVGReports';
 import SVGSearchFound from '../../assets/icons/SVGSearchFound';
 import SVGSearchLost from '../../assets/icons/SVGSearchLost';
@@ -112,23 +117,26 @@ function DashboardNav() {
           </ul>
           <div className="page-options__section">
             <h3 className="page-options__section-title">
+              <SVGQuickAdd/>
               Quick Add Templates
+              <SVGAddTemplate/>
             </h3>
           </div>
           <div className="page-options__section">
             <h3 className="page-options__section-title">
+              <SVGBatch/>
               Batch Actions
             </h3>
-            
           </div>
           <div className="page-options__section">
             <h3 className="page-options__section-title">
+              <SVGRecent/>
               Recently Added
             </h3>
           </div>
         </section>
-        <div className="page-options__expand" onClick={togglePageOptionsVisibility}>
-          {pageOptionsVisible?'<':'>'}
+        <div className={`${pageOptionsVisible?'page-options__expand':'page-options__expand --active'}`} onClick={togglePageOptionsVisibility}>
+          <SVGExpand/>
         </div>
       </div>
     </aside>

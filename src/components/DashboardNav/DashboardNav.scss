@@ -79,6 +79,7 @@
 
     &-title {
       @include heading-secondary;
+      font-weight: bold;
     }
 
     &-logo {
@@ -115,6 +116,8 @@
     &-title{
       @include heading-quaternary;
       font-weight: bold;
+      display: flex;
+      align-items: center;
     }
   }
 
@@ -128,6 +131,15 @@
     
     &:hover {
       cursor: pointer;
+    }
+
+    & svg {
+      transform: rotateY(180deg);
+      transition: transform .5s ease-in-out;
+    }
+
+    &.--active svg{
+      transform: rotateY(0deg);
     }
   }
 }

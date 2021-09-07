@@ -17,20 +17,22 @@ import LoginRegisterPage from './pages/LoginRegister/LoginRegister';
 import PatronPortalPage from './pages/PatronPortal/PatronPortal';
 
 function App() {
-
   return (
     <div className="app">
       <BrowserRouter>
-        <Header />
         <Switch>
-          <Route exact path={homeURL} component={HomePage} />
-          <Route path={aboutURL} component={AboutPage} />
-          <Route path={contactUsURL} component={ContactPage} />
-          <Route path={dashboardURL} component={DashboardPage} />
-          <Route path={loginRegisterURL} component={LoginRegisterPage}/>          
-          <Route path={patronPortalURL} component={PatronPortalPage} />
-        </Switch>
-
+          <Route path={dashboardURL} component={DashboardPage} />   
+          <Route>
+            <Header />
+            <Switch>
+              <Route exact path={homeURL} component={HomePage} />
+              <Route path={aboutURL} component={AboutPage} />
+              <Route path={contactUsURL} component={ContactPage} />
+              <Route path={loginRegisterURL} component={LoginRegisterPage}/>          
+              <Route path={patronPortalURL} component={PatronPortalPage} />
+            </Switch>
+          </Route>   
+        </Switch> 
       </BrowserRouter>
     </div>
   );
