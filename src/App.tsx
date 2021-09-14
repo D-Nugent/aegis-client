@@ -1,20 +1,14 @@
 import './App.scss';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { 
-  homeURL,
-  aboutURL,
-  contactUsURL,
-  dashboardURL,
-  loginRegisterURL,
-  patronPortalURL   
-} from './utilities/routerConfig';
+import {routes} from './utilities/routerConfig';
 import Header from './components/Header/Header';
 import HomePage from './pages/Home/Home';
 import AboutPage from './pages/About/About';
-import ContactPage from './pages/Contact/Contact';
 import DashboardPage from './pages/Dashboard/Dashboard';
 import LoginRegisterPage from './pages/LoginRegister/LoginRegister';
-import PatronPortalPage from './pages/PatronPortal/PatronPortal';
+// import ContactPage from './pages/Contact/Contact';
+// import PatronPortalPage from './pages/PatronPortal/PatronPortal';
+const {landingURLs,dashboardURLs} = routes;
 
 function App() {
 
@@ -23,12 +17,12 @@ function App() {
       <BrowserRouter>
         <Header />
         <Switch>
-          <Route exact path={homeURL} component={HomePage} />
-          <Route path={aboutURL} component={AboutPage} />
-          <Route path={contactUsURL} component={ContactPage} />
-          <Route path={dashboardURL} component={DashboardPage} />
-          <Route path={loginRegisterURL} component={LoginRegisterPage}/>          
-          <Route path={patronPortalURL} component={PatronPortalPage} />
+          <Route exact path={landingURLs.main} component={HomePage} />
+          <Route path={landingURLs.about} component={AboutPage} />
+          <Route path={dashboardURLs.main} component={DashboardPage} />
+          <Route path={landingURLs.loginRegister} component={LoginRegisterPage}/>          
+          {/* <Route path={contactUsURL} component={ContactPage} /> */}
+          {/* <Route path={patronPortalURL} component={PatronPortalPage} /> */}
         </Switch>
 
       </BrowserRouter>

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { aboutURL, customerFaqURL } from '../../utilities/routerConfig';
+import { routes } from '../../utilities/routerConfig';
 import './Home.scss';
 import '../../styles/globals.scss';
 import ReturnToTop from '../../components/ReturnToTop/ReturnToTop';
@@ -7,6 +7,7 @@ import HomeContactUs from '../../components/HomeContactUs/HomeContactUs';
 import HomeReportingItem from '../../components/HomeReportingItem/HomeReportingItem';
 import HomeItemUpdate from '../../components/HomeItemUpdate/HomeItemUpdate';
 import DrawableSVG from '../../components/DrawableSVG/DrawableSVG';
+const { landingURLs } = routes;
 
 function Home() {
   return (
@@ -35,7 +36,7 @@ function Home() {
               A secure platform for reporting, logging and tracking lost and found items. By enhancing
               the communication process the interface eases the process for clients and hotel guests alike. 
             </p>
-            <Link to={aboutURL} className="about-intro__more">
+            <Link to={landingURLs.about} className="about-intro__more">
               Learn More
               <svg className="svg-icon__chevron" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="14.7736" height="3.21165" transform="matrix(0.664353 0.747419 -0.664353 0.747419 2.18512 0)" fill="#FE5C32"/>
@@ -74,10 +75,10 @@ function Home() {
               best assist you, are you a client or a hotel guest? 
             </p>
             <div className="faq-intro__link-wrapper">
-              <Link to={customerFaqURL} className="faq-intro__link button--primary">
+              <Link to={landingURLs.faqs.client} className="faq-intro__link button--primary">
                 Client
               </Link>
-              <Link to={customerFaqURL} className="faq-intro__link button--secondary">
+              <Link to={landingURLs.faqs.guest} className="faq-intro__link button--secondary">
                 Guest
               </Link>
             </div>

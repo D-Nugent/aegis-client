@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import AegisLogo from '../../assets/logo/aegis-logo.svg';
 import HeaderNav from '../HeaderNav/HeaderNav';
 import HamburgerIcon from '../../assets/icons/hamburger-menu.svg';
-import { homeURL } from '../../utilities/routerConfig';
+import { routes } from '../../utilities/routerConfig';
+const {landingURLs} = routes;
 
 function Header() {
     
@@ -47,7 +48,7 @@ function Header() {
             <div className="header__spacer"></div>
             <header className="header">
                 <div className="header__column">
-                    <Link to={homeURL}>
+                    <Link to={landingURLs.main}>
                         <img className="header__logo" src={AegisLogo} alt="logo" />
                     </Link>
                     <HeaderNav />
