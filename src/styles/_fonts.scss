@@ -1,7 +1,7 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
-// Mixins
+// Mixins - with conversion @ root: 16px
 @mixin heading-primary {
     font-size: 1.313rem; // 21px   
     font-weight: 400;

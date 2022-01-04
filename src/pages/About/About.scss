@@ -1,0 +1,247 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+@use "../../styles/fonts" as *;
+
+.about {
+    // Revisit this
+    & section {
+        padding-left: $lp-padding-mobile;
+        padding-right: $lp-padding-mobile;
+        height: calc(100vh - #{$header-height-mob});
+        min-height: $min-screen-height-mob;
+
+        @include tablet {
+            padding-left: $lp-padding-tablet;
+            padding-right: $lp-padding-tablet;
+            height: calc(100vh - #{$header-height-tab-desk});
+            min-height: 500px;
+        }
+
+        @include desktop {
+            padding-left: $lp-padding-desktop;
+            padding-right: $lp-padding-desktop;
+        }
+    }
+}
+
+.purpose {
+    position: relative;
+    padding-top: 97px;
+    background: rgba(0, 0, 0, 0);
+
+    @include tablet {
+        padding-top: 53px;
+    }
+
+    @include desktop {
+        padding-top: 110px;
+    }
+
+    &__heading {
+        @include heading-primary;
+        font-weight: 400;
+        position: relative;
+        height: 41px;
+        margin-bottom: 17px;
+
+        @include tablet {
+            margin-bottom: 24px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 4px;
+            width: 100px;
+            background: $color-secondary;
+
+            @include tablet {
+                width: 134px;
+            }
+
+            @include desktop {
+                width: 152px;
+            }
+        }
+    }
+
+    &__heading-secondary {
+        @include heading-secondary;
+        margin-bottom: 8px;
+        color: $color-emphasis-primary;
+        font-weight: 400;
+
+        @include desktop {
+            margin-bottom: 24px;
+        }
+
+        &--emphasis {
+            font-style: italic;
+            margin-bottom: 12px;
+            
+            @include tablet {
+                margin-bottom: 15px;
+            }
+
+            @include desktop {
+                margin-bottom: 61px;
+            }
+        }
+    }
+
+    &__text-wrapper {
+        @include tablet {
+            width: 42%;
+        }
+
+        @include desktop {
+            width: 45%;
+        }
+    }
+
+    &__text {
+        @include heading-quaternary;
+        font-weight: 400;
+        margin-bottom: 16px;
+    }
+
+    &__svg {
+        position: absolute;
+        z-index: 1;
+        width: 142px;
+
+        @include tablet {
+            width: 287px;
+            top: 149px;
+            right: 0;
+        }
+
+        @include desktop {
+            width: 377px;
+            top: 221px;
+        }
+    }
+}
+
+.why {
+    background-color: $color-primary;
+    padding-top: 20px;
+
+    @include tablet {
+        padding-top: 28px;
+        display: flex;
+        align-items: center;
+        gap: 27px;
+    }
+
+    @include desktop {
+        gap: 180px;
+    }
+
+    &__screenshot-canvas {
+        width: 100%;
+        margin-bottom: 40px;
+
+        @include tablet {
+            width: 40%;
+            margin-bottom: 0;
+        }
+    }
+
+    &__screenshot {
+        width: 100%;
+    }
+
+    &__text-wrapper {
+        @include tablet {
+            width: 60%;
+        }
+    }
+
+    &__heading-secondary {
+        @extend .purpose__heading-secondary;
+    }
+
+    &__text {
+        @include heading-quaternary;
+        color: $color-field;
+        margin-bottom: 8px;
+        
+        @include tablet {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__icon-wrapper {
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        gap: 25px;
+        justify-content: space-between;
+        align-items: center;
+
+        & div {
+            width: 50px;
+            height: 75px;
+            gap: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    &__icon-label {
+        color: $color-field;
+        font-size: 14px;
+        line-height: 21px;
+
+        @include tablet {
+            font-size: 21px;
+            line-height: 25px;
+        }
+    }
+}
+
+.team {
+    padding-top: 97px;
+    background-color: $color-primary;
+
+    &__heading-secondary {
+        @extend .purpose__heading-secondary;
+    }
+
+    &__wrapper {
+        @include tablet {
+            display: flex;
+        }
+    }
+
+    &__column {
+        width: 100%;
+    }
+
+    &__text {
+        @extend .why__text;
+    }
+    
+    &__canvas {
+        padding-top: 50px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+
+        @include tablet {
+            padding-top: 0;
+            justify-content: flex-end;
+        }
+    }
+}

@@ -279,8 +279,18 @@
         }
     }
 }
+
 // Reset Defaults
 @mixin link-reset {
     color: $color-secondary;
     text-decoration: none;
 };
+
+// Header Height
+@mixin page-height-headerless {
+    height: calc(100vh - #{$header-height-mob});
+
+    @include tablet {
+        height: calc(100vh - #{$header-height-tab-desk});
+    }
+}

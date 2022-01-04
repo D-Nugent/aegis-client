@@ -1,0 +1,31 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+.hero {
+    position: relative;
+    width: 100%;
+    @include page-height-headerless;
+    min-height: $min-screen-height-mob;
+    background-color: $color-offset-secondary;
+
+    @include tablet {
+        min-height: 400px;
+    }
+}
+
+.svg-hero {
+    &__curve {
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        height: 167px;
+
+        @include tablet {
+            left: auto;
+            right: 0;
+            bottom: -2px;
+            height: 100%;
+        }
+    }
+}
