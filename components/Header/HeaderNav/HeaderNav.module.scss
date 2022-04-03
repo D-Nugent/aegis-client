@@ -1,0 +1,34 @@
+@use "/styles/mixins" as *;
+@use "/styles/fonts" as *;
+@use "/styles/variables" as *;
+
+.header-nav {
+    display: none;
+
+    @include tablet {
+        height: inherit;
+        display: grid;
+        place-items: center;
+    }
+
+    &__items {
+        height: inherit;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+    }
+    
+    &__item {
+        width: 56px;
+        margin-right: 1.25rem;
+    }
+    
+    &__link {
+        @include link-reset;
+        @include heading-secondary;
+
+        &:hover, &:active {
+            color: $color-emphasis-primary;
+        }
+    }
+}
