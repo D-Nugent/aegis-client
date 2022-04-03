@@ -7,8 +7,6 @@ import DrawableSVG from '../../components/DrawableSVG/DrawableSVG';
 import Link from 'next/link';
 import { ROUTE } from '../../types/routes';
 
-console.log(styles);
-
 function Home() {
   return (
     <>
