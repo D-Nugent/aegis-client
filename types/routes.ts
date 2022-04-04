@@ -3,7 +3,7 @@ export enum ROUTE {
   ABOUT = '/about',
   CONTACT = '/contact',
   DASHBOARD = '/dashboard',
-  LOGINREGISTER = '/loginregister',
+  LOGINREGISTER = '/loginRegister',
   FAQS = '/faqs',
 }
 

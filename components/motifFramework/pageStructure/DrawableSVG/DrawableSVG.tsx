@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useScrollTrack } from '../../utilities/customHooks/useScrollTrack';
+import { useScrollTrack } from '../../../../utilities/customHooks/useScrollTrack';
 import styles from './DrawableSVG.module.scss';
 
 interface DrawableSVGProps {

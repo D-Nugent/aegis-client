@@ -1,5 +1,4 @@
 import React from 'react';
-import { Switch, Route, NavLink } from 'react-router-dom';
 import { customerFaqURL, editProfileURL, foundItemURL, profileURL, reportsURL, searchItemsURL } from '../../utilities/routerConfig';
 
 function DashboardNav() {

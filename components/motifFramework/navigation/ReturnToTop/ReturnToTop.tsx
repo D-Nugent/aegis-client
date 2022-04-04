@@ -1,4 +1,4 @@
-import { useScrollTrack } from '../../utilities/customHooks/useScrollTrack';
+import { useScrollTrack } from '../../../../utilities/customHooks/useScrollTrack';
 import styles from './ReturnToTop.module.scss';
 
 /**

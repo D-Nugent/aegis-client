@@ -1,9 +1,9 @@
 import styles from './Home.module.scss';
-import ReturnToTop from '../../components/ReturnToTop/ReturnToTop';
-import HomeContactUs from '../../components/HomeContactUs/HomeContactUs';
-import HomeReportingItem from '../../components/HomeReportingItem/HomeReportingItem';
-import HomeItemUpdate from '../../components/HomeItemUpdate/HomeItemUpdate';
-import DrawableSVG from '../../components/DrawableSVG/DrawableSVG';
+import ReturnToTop from '../../components/motifFramework/navigation/ReturnToTop/ReturnToTop';
+import HomeContactUs from '../../components/home/HomeContactUs/HomeContactUs';
+import HomeReportingItem from '../../components/home/HomeReportingItem/HomeReportingItem';
+import HomeItemUpdate from '../../components/home/HomeItemUpdate/HomeItemUpdate';
+import DrawableSVG from '../../components/motifFramework/pageStructure/DrawableSVG/DrawableSVG';
 import Link from 'next/link';
 import { ROUTE } from '../../types/routes';
 

@@ -16,19 +16,15 @@
         list-style-type: none;
         display: flex;
         align-items: center;
+        margin-left: 16px;
     }
-    
-    &__item {
-        width: 56px;
-        margin-right: 1.25rem;
-    }
-    
-    &__link {
-        @include link-reset;
-        @include heading-secondary;
+}
 
-        &:hover, &:active {
-            color: $color-emphasis-primary;
-        }
-    }
+.active-menu {
+    background-color: $color-emphasis-primary;
+    height: 4px;
+    justify-self: flex-start;
+    position: relative;
+    top: -4px;
+    transition: all .3s ease-in;
 }
