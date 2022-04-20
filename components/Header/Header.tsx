@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { ROUTE } from '../../types/routes';
 import styles from './Header.module.scss';
 import Image from 'next/image';
+import AegisButton, { ButtonType } from '../motifFramework/interactiveActions/AegisButton/AegisButton';
 
 function Header() {
     
@@ -64,11 +65,20 @@ function Header() {
                             <label htmlFor="password">
                                 <input className={styles["header__input"]} type="text" name="password" value={loginData.password} placeholder="Password" onChange={handleChange} />
                             </label>
-                            <button className={`button--primary ${styles['header__button']}`} type="submit" >Login</button>
+                            {/* <button className={`button--primary ${styles['header__button']}`} type="submit" >Login</button> */}
+                            <AegisButton type={ButtonType.PRIMARY} action={handleLogin}>
+                                Login
+                            </AegisButton>
                         </form>
                     }
                     {!user &&
-                        <button className={`button--primary ${styles["header__button"]} ${styles["header__button--mob"]}`} type="button" onClick={handleLoginMob}>Login</button>
+                        // <button className={`button--primary ${styles["header__button"]} ${styles["header__button--mob"]}`} type="button" onClick={handleLoginMob}>Login</button>
+                        <AegisButton
+                            type={ButtonType.PRIMARY} action={handleLoginMob}
+                        >
+                            Login
+                        </AegisButton>
+
                     }
                     <div className={styles["header__hamburger-container"]} onClick={handleShowModal}>
                         <img src={HamburgerIcon} alt="hamburger menu" />

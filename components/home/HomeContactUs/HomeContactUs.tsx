@@ -1,3 +1,4 @@
+import AegisButton, { ButtonType } from '../../motifFramework/interactiveActions/AegisButton/AegisButton';
 import styles from './HomeContactUs.module.scss';
 
 export default function HomeContactUs() {
@@ -55,12 +56,18 @@ export default function HomeContactUs() {
               placeholder="Please provide a detailed message so that we may determine how best to assist you"
             >
             </textarea>
-            <button type="submit" 
+            {/* <button type="submit" 
             className={`
               ${styles["contact-form__submit"]}
               button--primary
             `}
-            >Submit</button>
+            >Submit</button> */}
+            <AegisButton
+              type={ButtonType.PRIMARY}
+              action={() => console.log(this)}
+            >
+              Submit
+            </AegisButton>
           </form>
         </div>
   )
