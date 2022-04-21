@@ -1,0 +1,45 @@
+$themes: (
+  light:(
+    color-primary: #143058,
+    color-secondary: #0f2544,
+    color-tertiary: #435979,
+    color-quarternary: #d0d6de,
+    color-offset-primary: #eeebe8,
+    color-offset-secondary: #f9f8f7,
+    color-field: #fcfcfb,
+    color-theme: #fe5c32,
+    color-emphasis-secondary: #fba919,
+    color-emphasis-tertiary: #fccd7a,
+  ),
+  dark:(
+    color-primary: #143058,
+    color-secondary: #0f2544,
+    color-tertiary: #435979,
+    color-quarternary: #d0d6de,
+    color-offset-primary: #143058,
+    color-offset-secondary: #0f2544,
+    color-field: #fcfcfb,
+    // color-emphasis-primary: #fe5c32,
+    color-theme: teal,
+    color-emphasis-secondary: #fba919,
+    color-emphasis-tertiary: #fccd7a,
+  )
+);
+
+@mixin themed() {
+  @each $theme, $map in $themes {
+    .theme--#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes,$theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function t($key) {
+  @return map-get($theme-map, $key);
+}

@@ -1,0 +1,81 @@
+@use "./mixins" as *;
+@use "./fonts" as *;
+@use "./variables" as *;
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: inherit;
+}
+
+html, body, textarea, button {
+  color: $text-primary;
+  font-family: 'Roboto', 'Raleway', 'Ubuntu', sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+body, #root {
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, label {
+  user-select: none;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.search-bar{
+    width: 100%;
+    max-width: 224px;
+    height: 20px;
+    display: flex;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, .25);
+    
+    @include desktop{
+      max-width: 240px;
+    }
+  
+    & input {
+      @include heading-quaternary;
+      height: 100%;
+      width: 100%;
+      border: 0;
+      background-color: $color-field;
+      outline: 0;
+      padding: 2% 4%;
+  
+      &:focus{
+        border-bottom: 1px solid $color-emphasis-primary;
+        box-shadow: 0 -2px 2px inset rgba(0, 0, 0, .25);
+      }
+    }
+  
+    & button {
+      height: 20px;
+      min-width: 20px;
+      background-color: $color-emphasis-primary;
+      border: 0;
+      color: $color-field;
+  
+      &:hover{
+        cursor: pointer;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, .5);
+      }
+    }
+  }

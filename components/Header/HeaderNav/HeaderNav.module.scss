@@ -1,0 +1,30 @@
+@use "/styles/mixins" as *;
+@use "/styles/fonts" as *;
+@use "/styles/variables" as *;
+
+.header-nav {
+    display: none;
+
+    @include tablet {
+        height: inherit;
+        display: grid;
+        place-items: center;
+    }
+
+    &__items {
+        height: inherit;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        margin-left: 16px;
+    }
+}
+
+.active-menu {
+    background-color: $color-emphasis-primary;
+    height: 4px;
+    justify-self: flex-start;
+    position: relative;
+    top: -4px;
+    transition: all .3s ease-in;
+}

@@ -1,0 +1,17 @@
+@use "/styles/mixins" as *;
+@use "/styles/fonts" as *;
+@use "/styles/variables" as *;
+
+
+.nav-link {
+  @include link-reset;
+  @include heading-secondary;
+  border-radius: 8px;
+  padding: 4px 8px;
+  width: fit-content;
+  margin: 0 8px;
+
+  &.--active {
+    color: $color-emphasis-primary;
+  }
+}

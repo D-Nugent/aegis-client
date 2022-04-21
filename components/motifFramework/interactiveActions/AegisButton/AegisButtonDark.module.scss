@@ -1,0 +1,28 @@
+@use "/styles/variables" as *;
+
+.button {
+  &--primary {
+      color: $color-field;
+      background-color: teal;
+  }
+
+  &--secondary {
+      color: $color-emphasis-primary;
+      background-color: violet;
+  }
+
+  &--tertiary {
+      color: $color-field;
+      background-color: #ce3131;
+  }
+
+  &--disabled {
+      color: $color-quarternary;
+      background-color: black;
+
+      &:hover {
+          cursor:not-allowed;
+      }
+  }
+}
+
