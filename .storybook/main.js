@@ -8,8 +8,10 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/addon-a11y",
-    "@storybook/preset-scss",
     "storybook-addon-designs",
+    "storybook-addon-next"
+    // Preset-scss does not work as well as next, so utlize as needed during dev
+    // "@storybook/preset-scss",
   ],
   "framework": "@storybook/react",
   "core": {

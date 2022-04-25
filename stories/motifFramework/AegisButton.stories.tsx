@@ -11,11 +11,20 @@ export default {
 
 const Template: ComponentStory<typeof AegisButton> = (args) => {
   return (
-    <AegisButton {...args} />
+    <AegisButton {...args} >
+      {args.children}
+    </AegisButton>
   )
 }
 
 export const Primary = Template.bind({});
 Primary.args = {
   type: ButtonType.PRIMARY,
+  children: <p>Primary Button</p>,
 };
+Primary.parameters = {
+  nextRouter: {
+    path: '/loginRegister',
+    asPath: '/loginRegister',
+  }
+}
