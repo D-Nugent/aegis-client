@@ -1,10 +1,10 @@
 import React from 'react';
-import { customerFaqURL, editProfileURL, foundItemURL, profileURL, reportsURL, searchItemsURL } from '../../utilities/routerConfig';
+// import { customerFaqURL, editProfileURL, foundItemURL, profileURL, reportsURL, searchItemsURL } from '../../utilities/routerConfig';
 
 function DashboardNav() {
     return (
         <nav>
-            <ul>
+            {/* <ul>
                 <li>
                     <NavLink to={dashboardURLs.addItem.main}>Add Item</NavLink>
                 </li>
@@ -33,7 +33,7 @@ function DashboardNav() {
 
             <Switch>
                 <Route path={dashboardURLs.addItem.main} component={undefined} />
-            </Switch>
+            </Switch> */}
 
         </nav>
     );
