@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
+    "@storybook/addon-a11y": "^6.4.22",
     "@storybook/addon-actions": "^6.5.0-beta.0",
     "@storybook/addon-essentials": "^6.5.0-beta.0",
     "@storybook/addon-interactions": "^6.5.0-beta.0",
@@ -54,6 +55,7 @@
     "@storybook/manager-webpack5": "^6.5.0-beta.0",
     "@storybook/react": "^6.5.0-beta.0",
     "@storybook/testing-library": "^0.0.11",
-    "babel-loader": "^8.2.5"
+    "babel-loader": "^8.2.5",
+    "storybook-addon-designs": "^6.2.1"
   }
 }
